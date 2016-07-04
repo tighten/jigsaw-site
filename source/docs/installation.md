@@ -26,7 +26,7 @@ If you run into dependency conflicts when trying to install Jigsaw globally, you
 Create a folder for your site:
 
 ```
-$ mkdir my-site && cd my-site
+$ mkdir my-site && cd "$_"
 ```
 
 Install Jigsaw via Composer:
@@ -35,8 +35,4 @@ Install Jigsaw via Composer:
 $ composer require tightenco/jigsaw
 ```
 
-Initialize a new project in the current folder:
-
-```
-$ ./vendor/bin/jigsaw init
-```
+> You may add `./vendor/bin` to your `$PATH` so you can call `jigsaw` instead of `./vendor/bin/jigsaw`.
