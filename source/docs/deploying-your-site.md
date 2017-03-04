@@ -14,7 +14,7 @@ Since Jigsaw sites are just static HTML and Javascript, they are simple and chea
 The approach we use at Tighten Co. for deploying Jigsaw sites to GitHub pages looks like this:
 
 1. Build your site for production
-    
+
     ```
     $ gulp --production && jigsaw build production
     ```
@@ -46,6 +46,9 @@ $ jigsaw build production
 ```
 
 Then simply follow the steps in [Amazon's static site documentation](http://docs.aws.amazon.com/gettingstarted/latest/swh/website-hosting-intro.html) to deploy your `build_production` folder to your S3 bucket.
+
+> [Here](http://www.codehops.com/2016/02/08/host-a-static-site-on-aws-s3.html) is a step-by-step article on deploying your site to S3.
+
 
 ### Manually
 

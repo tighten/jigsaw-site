@@ -1576,63 +1576,48 @@ a:focus {
   }
 }
 .flex {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .flex-col {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 .flex-center {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 .flex-y-center {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 .flex-y-end {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 .flex-spaced {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .flex-around {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 .flex-fit {
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
@@ -1704,12 +1689,10 @@ img {
 }
 @media (min-width: 544px) {
   .input-group-sm {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
   .input-group-sm .form-control {
-    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     margin-right: 1rem;
@@ -1747,7 +1730,6 @@ img {
   padding: 0.5rem 1rem;
   background: #fff;
   border: 1px solid #d6d0d6;
-  transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
 }
 .list-group-item + .list-group-item {
@@ -1892,7 +1874,6 @@ a.list-group-item:hover,
   border-radius: 0.5rem;
   border-right-color: transparent;
   border-top-color: transparent;
-  -webkit-animation: spin-around 500ms infinite linear;
   animation: spin-around 500ms infinite linear;
   content: "";
 }
@@ -1902,13 +1883,10 @@ a.list-group-item:hover,
   padding-bottom: 1rem;
 }
 .navbar-content {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
@@ -4297,7 +4275,6 @@ a.list-group-item:hover,
   border-radius: 0.5rem;
   border-right-color: transparent;
   border-top-color: transparent;
-  -webkit-animation: spin-around 500ms infinite linear;
   animation: spin-around 500ms infinite linear;
   content: "";
 }
@@ -4431,82 +4408,38 @@ a.list-group-item:hover,
 .fade-grow-enter,
 .fade-grow-leave {
   opacity: 0;
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
-@-webkit-keyframes spin-around {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 @keyframes spin-around {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 .animate-shake {
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-perspective: 1000px;
   perspective: 1000px;
-}
-@-webkit-keyframes shake {
-  10%,
-  90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%,
-  80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-    transform: translate3d(2px, 0, 0);
-  }
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%,
-  60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-    transform: translate3d(4px, 0, 0);
-  }
 }
 @keyframes shake {
   10%,
   90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
     transform: translate3d(-1px, 0, 0);
   }
   20%,
   80% {
-    -webkit-transform: translate3d(2px, 0, 0);
     transform: translate3d(2px, 0, 0);
   }
   30%,
   50%,
   70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
     transform: translate3d(-4px, 0, 0);
   }
   40%,
   60% {
-    -webkit-transform: translate3d(4px, 0, 0);
     transform: translate3d(4px, 0, 0);
   }
 }
