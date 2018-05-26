@@ -37,12 +37,12 @@ If you'd like to change the source and destination folders for your assets, edit
 mix.setPublicPath('source/assets/');
 
 mix.js('source/_assets/js/main.js', 'js/')
-    .sass('source/_assets/sass/main.scss', 'css/main.css')
+    .less('source/_assets/less/main.less', 'css/main.css')
 ```
 
 ### Enabling different preprocessors
 
-Jigsaw ships with the following `webpack.mix.js` and is configured to use Sass out of the box:
+Jigsaw ships with the following `webpack.mix.js` and is configured to use Less out of the box:
 
 ```js
 let mix = require('laravel-mix');
@@ -54,22 +54,22 @@ mix.webpackConfig({
     plugins: [
         build.jigsaw,
         build.browserSync(),
-        build.watch(['source/**/*.md', 'source/**/*.php', 'source/**/*.scss']),
+        build.watch(['source/**/*.md', 'source/**/*.php', 'source/**/*.less']),
     ]
 });
 
 mix.js('source/_assets/js/main.js', 'js')
-    .sass('source/_assets/sass/main.scss', 'css/main.css')
+    .less('source/_assets/less/main.less', 'css/main.css')
     .version();
 ```
 
-If you'd like to switch to Less, use Coffeescript, or take advantage of any other Mix features, feel free to edit this file to your heart's content. For most applications, only the last six lines of the `webpack.mix.js` file will need to be altered, so we will only show those in the following examples.
+If you'd like to switch to Sass, use Coffeescript, or take advantage of any other Mix features, feel free to edit this file to your heart's content. For most applications, only the last six lines of the `webpack.mix.js` file will need to be altered, so we will only show those in the following examples.
 
-Here's an example of what it might look like to use Less and React:
+Here's an example of what it might look like to use Sass and React:
 
 ```js
 mix.react('source/_assets/js/main.js', 'js')
-    .less('source/_assets/sass/main.less', 'css/main.css')
+    .sass('source/_assets/sass/main.sass', 'css/main.css')
     .version();
 ```
 
