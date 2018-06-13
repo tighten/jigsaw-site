@@ -35,7 +35,7 @@ $ composer require tightenco/jigsaw
 Finally, from your project directory, run Jigsaw's `init` command to scaffold the default directory structure:
 
 ```
-$ ./vendor/bin/jigsaw init
+$ vendor/bin/jigsaw init
 ```
 
 ---
