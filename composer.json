@@ -1,7 +1,13 @@
 {
     "name": "tightenco/jigsaw-site",
     "require": {
-        "tightenco/jigsaw": "^1.0"
+        "tightenco/jigsaw": "^1.0",
+        "samdark/sitemap": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
     },
     "authors": [
         {
