@@ -13,7 +13,12 @@ class GenerateSitemap
         $sitemap = new Sitemap($jigsaw->getDestinationPath() . '/sitemap.xml');
 
         collect($jigsaw->getOutputPaths())
-            ->push('/404.html') // Manually add the 404 page. If added automatically, the $path does not being with a /, so the URL is not correct.
+            ->map(function ($path) {
+                if ($path) {
+                    return str_start($path, '/');
+                }
+                return $path;
+            })
             ->each(function ($path) use ($baseUrl, $sitemap) {
                 if (! $this->isAsset($path)) {
                     $sitemap->addItem($baseUrl . $path, time(), Sitemap::DAILY);
@@ -25,7 +30,7 @@ class GenerateSitemap
 
     public function isAsset($path)
     {
-        return collect(['/css', '/img', '/js', '/CNAME', '404.html'])->contains(function ($value) use ($path) {
+        return collect(['/css', '/img', '/js', '/CNAME'])->contains(function ($value) use ($path) {
             return starts_with($path, $value);
         });
     }
