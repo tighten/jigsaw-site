@@ -17,7 +17,6 @@ class GenerateSitemap
                 if ($path) {
                     return str_start($path, '/');
                 }
-                return $path;
             })
             ->each(function ($path) use ($baseUrl, $sitemap) {
                 if (! $this->isAsset($path)) {
