@@ -1,0 +1,18 @@
+/* layout */
+.container-content {
+    @apply .max-w-3xl;
+    @apply .mx-auto;
+    @apply .px-4;
+}
+
+@screen sm {
+    .container-content {
+        @apply .px-6;
+    }
+}
+/* backgrounds */
+.bg-gradient-purple {
+    background: #884992;
+    background: -webkit-linear-gradient(to right, #703e84, #884992);
+    background: linear-gradient(to right, #703e84, #884992);
+}

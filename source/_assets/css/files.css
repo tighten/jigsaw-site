@@ -1,0 +1,83 @@
+.files {
+    @apply .bg-white;
+    @apply .border;
+    @apply .border-indigo-lighter;
+    @apply .mb-10;
+    @apply .mt-6;
+    @apply .mx-auto;
+    @apply .px-8;
+    @apply .py-4;
+    @apply .rounded;
+    @apply .text-sm;
+}
+.ellipsis {
+    @apply .leading-none;
+    @apply .p-2;
+    @apply .text-blue-dark;
+    @apply .tracking-wide;
+}
+
+.file::before {
+    @apply .absolute;
+    @apply .block;
+    @apply .fill-current;
+    @apply .text-blue-dark;
+
+    background-size: 40px 18px;
+    content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' viewBox=\'0 0 224.16 86.11\'><path stroke=\'#b0c1d3\' fill=\'#ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'6px\' d=\'M173.53,1.5l-27,.09s-7.42,0-7.42,7.42V77.07s0,7.42,7.42,7.42h49.21s7.42,0,7.42-7.42l-.07-48.21Z\'/><polygon fill=\'#b0c1d3\' stroke=\'none\' points=\'172.9 1.94 172.9 29.46 202.6 29.46 172.9 1.94\'/></svg>');
+    height: 18px;
+    margin-left: -46px;
+    width: 40px;
+}
+
+.file {
+    @apply .px-6;
+    @apply .pt-4;
+    @apply .text-blue-darker;
+}
+
+.file.focus {
+    @apply .bg-grey-lighter;
+    @apply .py-4;
+    @apply .rounded;
+
+    margin-left: -15px;
+    margin-top: 8px;
+    padding-left: 53px;
+}
+
+.folder::before {
+    @apply .absolute;
+    @apply .block;
+
+    background-size: 40px 18px;
+    content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' viewBox=\'0 0 224.16 85.9\'><path fill=\'#b0c1d3\' d=\'M63.39,46.77s4.49-3.61,0-7.21L38.29,19.41S33.8,15.8,33.8,21.56V64.77s0,5.76,4.49,2.15Z\'/><path fill=\'#b0c1d3\' d=\'M220.75,74.77V25s0-8-8-8H176.41c-5.25,0-5.8-2.33-5.8-6.33,0-2.17-1.68-7-7.93-7H129.57s-8,0-8,8V74.77s0,8,8,8h83.17s8,0,8-8\'/></svg>');
+    height: 18px;
+    margin-left: -46px;
+    width: 40px;
+}
+
+.folder {
+    @apply .text-purple;
+    padding: 12px 0 0 28px;
+}
+
+.folder.focus {
+    @apply .bg-grey-lighter;
+    @apply .py-4;
+    @apply .rounded;
+
+    margin-left: -15px;
+    margin-top: 8px;
+    padding-left: 53px;
+}
+
+.folder--open::before {
+    @apply .absolute;
+    @apply .block;
+
+    background-size: 40px 18px;
+    height: 18px;
+    margin-left: -46px;
+    width: 40px;
+}

@@ -33,13 +33,7 @@ p {
     @apply .text-blue-dark;
 }
 
-// utilities
-.lead {
-    @apply .text-lg;
-    @apply .leading-normal;
-}
-
-// responsive styles
+/* responsive styles */
 @screen md {
     h1 {
         @apply .text-4xl;
@@ -55,9 +49,5 @@ p {
 
     h4 {
         @apply .text-lg;
-    }
-
-    .lead {
-        @apply .text-xl;
     }
 }
