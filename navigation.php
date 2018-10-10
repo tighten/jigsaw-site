@@ -4,9 +4,7 @@ return [
     'Installation' => [
         'root' => '/docs/installation',
         'children' => [
-            'Upgrading' => [
-                'root' => '/docs/upgrading',
-            ],
+            'Upgrading' => ['root' => '/docs/upgrading'],
         ],
     ],
     'Building & Previewing' => ['root' => '/docs/building-and-previewing'],
@@ -14,20 +12,9 @@ return [
     'Creating your Site\'s Content' => [
         'root' => '/docs/content',
         'children' => [
-            'Blade Templates & Partials' => [
-                'root' => '/docs/content-blade',
-                'children' => [
-                    'Upgrading' => [
-                        'root' => '/docs/upgrading',
-                    ],
-                ],
-            ],
-            'Markdown' => [
-                'root' => '/docs/content-markdown',
-            ],
-            'Other File Types' => [
-                'root' => '/docs/content-other-file-types',
-            ],
+            'Blade Templates & Partials' => ['root' => '/docs/content-blade'],
+            'Markdown' => ['root' => '/docs/content-markdown'],
+            'Other File Types' => ['root' => '/docs/content-other-file-types'],
         ],
     ],
     'Site Variables' => ['root' => '/docs/site-variables'],
@@ -36,24 +23,12 @@ return [
     'Collections' => [
         'root' => '/docs/collections',
         'children' => [
-            'Extending Parent Templates' => [
-                'root' => '/docs/collections-extending-parent-templates',
-            ],
-            'Paths' => [
-                'root' => '/docs/collections-paths',
-            ],
-            'Sorting' => [
-                'root' => '/docs/collections-sorting',
-            ],
-            'Pagination' => [
-                'root' => '/docs/collections-pagination',
-            ],
-            'Variables and Functions' => [
-                'root' => '/docs/collections-variables-and-functions',
-            ],
-            'Remote Collections' => [
-                'root' => '/docs/collections-remote-collections',
-            ],
+            'Extending Parent Templates' => ['root' => '/docs/collections-extending-parent-templates'],
+            'Paths' => ['root' => '/docs/collections-paths'],
+            'Sorting' => ['root' => '/docs/collections-sorting'],
+            'Pagination' => ['root' => '/docs/collections-pagination'],
+            'Variables and Functions' => ['root' => '/docs/collections-variables-and-functions'],
+            'Remote Collections' => ['root' => '/docs/collections-remote-collections'],
         ],
     ],
     'Pretty Urls' => ['root' => '/docs/pretty-urls'],

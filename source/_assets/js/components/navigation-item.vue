@@ -11,6 +11,8 @@
                 :class="{ 'text-purple font-medium': isActive(child.root) }">
                     {{ key }}
                 </a>
+
+                <navigation-item v-if="item.children" :item="child"></navigation-item>
             </li>
         </ul>
     </li>
@@ -18,11 +20,19 @@
 
 <script>
 export default {
+    name: 'navigation-item',
     props: {
         item: {
             type: Object,
             required: true,
         },
+    },
+
+    computed: {
+        hasChildren() {
+            return this.model.children &&
+                this.model.children.length
+        }
     },
 
     methods: {
