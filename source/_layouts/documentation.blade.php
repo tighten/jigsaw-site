@@ -41,7 +41,7 @@
     <div class="flex flex-col lg:flex-row py-2 container-content">
         <navigation :links='@json($page->navigation)'></navigation>
 
-        <div class="bg-white rounded-lg w-full max-w-md mb-10 mx-auto px-6 py-4 documentation-page xl:max-w-lg" v-pre>
+        <div class="bg-white rounded-lg w-full max-w-md mb-10 mx-auto px-6 py-4 font-normal shadow xl:max-w-lg" v-pre>
             @yield('documentation_content')
         </div>
 
