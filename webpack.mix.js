@@ -1,7 +1,6 @@
 let build = require("./tasks/build.js");
 let mix = require("laravel-mix");
-let tailwindcss = require("tailwindcss");
-require("laravel-mix-purgecss");
+require("laravel-mix-tailwind");
 
 mix.disableSuccessNotifications();
 mix.setPublicPath("source/assets/build");
@@ -15,13 +14,8 @@ mix.webpackConfig({
 });
 
 mix.js('source/_assets/js/app.js', 'js/')
-    .postCss('source/_assets/css/documentation.css', 'css/')
     .postCss('source/_assets/css/main.css', 'css/')
-    .options({
-        processCssUrls: false,
-        postCss: tailwindcss('./tailwind.js')
-      })
-    .version();
+    .tailwind();
 
 if (!mix.inProduction()) {
   mix.sourceMaps();

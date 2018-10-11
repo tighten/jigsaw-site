@@ -1,9 +1,5 @@
 @extends('_layouts.master')
 
-@section('styles')
-<link rel="stylesheet" type="text/css" href="{{ mix('css/documentation.css', 'assets/build') }}">
-@endsection
-
 @section('body')
 <header class="w-full bg-white absolute z-10 shadow-md">
     <nav class="flex items-center justify-center py-4 container-content" aria-role="navigation">

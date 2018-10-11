@@ -1,5 +1,35 @@
 a {
   text-decoration: none;
+  color: #773580;
+}
+
+blockquote {
+  border-color: #dae4e9;
+  border-left-width: 4px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #f2f5f8;
+}
+
+blockquote > p {
+  margin: 0;
+}
+
+code {
+  background-color: #f3f7f9;
+  display: inline;
+  line-height: 2;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  color: #45658a;
+  font-size: .875rem;
+  width: 80%;
 }
 
 h1 {
@@ -23,14 +53,95 @@ h2,
 h3,
 h4 {
   font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #0f2f53;
+}
+
+hr {
+  border-width: 1px;
+  border-color: #dae4e9;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  margin-bottom: .75rem;
+}
+
+li > ul {
+  padding-left: 1rem;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol,
+ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: .5rem;
 }
 
 p {
   font-weight: 400;
   line-height: 1.5;
+  margin-top: .5rem;
   margin-bottom: .5rem;
-  font-size: 1rem;
   color: #45658a;
+  font-size: 1rem;
+}
+
+pre {
+  background-color: #f2f5f8;
+  line-height: 2;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: .25rem;
+  max-width: 43em; /* prevent code snippets from breaking width */
+}
+
+pre > code {
+  background-color: transparent;
+  display: inline;
+  padding: 0;
+}
+
+pre + blockquote {
+  margin-top: 1.5rem;
+}
+
+.nav-list li::before {
+  display: none;
+}
+
+ul > li::before {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  height: 1rem;
+  margin-left: -1.5rem;
+  margin-top: .25rem;
+  width: 1rem;
+  background-image: url('/assets/img/icon-arrow.svg');
+  content: '';
+}
+
+ul > li {
+  list-style: none;
+  padding: 0;
+  margin-bottom: .5rem;
+  margin-left: 1rem;
 }
 
 /* responsive styles */
@@ -179,8 +290,7 @@ p {
   width: 1rem;
 }
 
-// responsive styles
-@screen md {
+@media (min-width: 768px) {
   .example-row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

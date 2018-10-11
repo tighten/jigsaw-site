@@ -29,7 +29,6 @@
     @apply .w-4;
 }
 
-// responsive styles
 @screen md {
     .example-row {
         @apply .flex-row;

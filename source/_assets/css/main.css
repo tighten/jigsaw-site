@@ -1,10 +1,10 @@
 @tailwind preflight;
 @tailwind components;
 
-@import 'typography.css';
-@import 'files.css';
-@import 'code-editor.css';
-@import 'docsearch.css';
-@import 'custom.css';
+@import './typography.css';
+@import './files.css';
+@import './code-editor.css';
+@import './docsearch.css';
+@import './custom.css';
 
 @tailwind utilities;
