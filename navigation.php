@@ -35,4 +35,10 @@ return [
     'Custom 404 Page' => ['root' => '/docs/custom-404-page'],
     'Event Listeners' => ['root' => '/docs/event-listeners'],
     'Deploying Your Site' => ['root' => '/docs/deploying-your-site'],
+    'Examples' => [
+        'children' => [
+            'Navigation' => ['root' => '/docs/examples-navigation'],
+            'Tag Cloud' => ['root' => '/docs/examples-tag-cloud'],
+        ],
+    ],
 ];
