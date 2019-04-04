@@ -2,11 +2,13 @@
 extends: _layouts.documentation
 section: documentation_content
 ---
-### Creating Categories
+### Building
 
-Define a Categories collection to be used in your layout. 
+#### 1. Define A Categories Collection. 
 
-[Collections](/docs/collections)
+The categories section in the example below has an additional `posts` attribute which returns a collection of posts that are associated to the category.
+
+[View Collections](/docs/collections)
 
 ```php
 // config.php
@@ -23,14 +25,14 @@ Define a Categories collection to be used in your layout.
 ],
 ```
 
-Add categories to `/blog/categories/` or the path you declare in the config. 
+> The `path` attribute is used to define where the categories are located.
 
-For example `/blog/categories/_accessibility.md`
+#### 2. Add Category Content
 
-
-[Creating your Site's Content](/docs/content)
+Add [content](/docs/content) to to `/blog/categories/` or the path you declare in the config. 
 
 ```yaml
+# /blog/categories/_accessibility.md
 ---
 extends: _layouts.category
 title: Accessibility
@@ -40,11 +42,15 @@ description: Posts related to accessibility
 A description about the Accessibility category.
 ```
 
+#### 3. Create The Markup
+
 With a collection of Categories, you can iterate over `$categories` to access it's attributes.  
 
 ```html
 <div>
-    <small class="block uppercase text-blue-darker font-medium mb-2">Categories</small>
+    <small class="block uppercase text-blue-darker font-medium mb-2">
+        Categories
+    </small>
     @foreach ($categories as $category)
         <a
             href="{{ '/blog/categories/' . $category->title }}"
