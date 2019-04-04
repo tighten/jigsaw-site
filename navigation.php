@@ -38,7 +38,7 @@ return [
     'Examples' => [
         'children' => [
             'Navigation' => ['root' => '/docs/examples-navigation'],
-            'Tag Cloud' => ['root' => '/docs/examples-tag-cloud'],
+            'Category Cloud' => ['root' => '/docs/examples-category-cloud'],
         ],
     ],
 ];

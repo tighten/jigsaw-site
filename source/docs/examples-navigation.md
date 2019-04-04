@@ -3,15 +3,14 @@ extends: _layouts.documentation
 section: documentation_content
 ---
 
-## Generating A Navigation
+## Creating A Navigation
 
+Out-of-the-box the starter templates come with a pre-built navigation.
 ```php
 <?php
 // config.php
 return [
-    'production' => false,
-    'baseUrl' => 'http://jigsaw-site.test',
-    'navigation' => include_once('./navigation.php'),
+    // site configuration
     
     // helpers
     'isActive' => function ($page, $path) {
