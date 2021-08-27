@@ -1,6 +1,6 @@
 /build_local/
-/build_staging/
 /build_production/
 /node_modules/
+/torchlight_cache/
 /vendor/
-.DS_Store
+.env
