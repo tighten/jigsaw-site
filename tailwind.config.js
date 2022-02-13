@@ -55,6 +55,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: ['proxima-nova', ...defaults.fontFamily.sans],
+                mono: ["'JetBrains Mono'", ...defaults.fontFamily.mono],
             },
             // All defaults, kept to override v2 default line heights
             fontSize: {
