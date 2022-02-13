@@ -26,7 +26,7 @@ You can also sort your collection by the values of variables defined in the YAML
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -42,7 +42,7 @@ To sort by multiple variables (for a hierarchical sort), specify an array of var
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -58,7 +58,7 @@ To sort in descending order, prepend a `-` to the variable name:
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [

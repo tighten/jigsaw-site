@@ -15,8 +15,8 @@ To get started, first make sure you have Node.js and NPM installed in your envir
 
 Once you have Node.js and NPM installed, pull in the dependencies needed to compile your assets:
 
-```
-$ npm install
+```bash
+npm install
 ```
 
 For more detailed installation instructions, check out the [full Laravel Mix documentation](https://laravel.com/docs/7.x/mix).
@@ -101,8 +101,8 @@ In your templates, you can reference these assets using the `mix` Blade directiv
 
 To compile your assets, run:
 
-```
-$ npm run dev
+```bash
+npm run dev
 ```
 
 First, Webpack will compile your assets and store them in the `/source/assets/build` directory. Then, Jigsaw's `build` command will be run automatically to build your site (including your compiled assets) to `/build_local`. You can then preview your changes in the browser.
@@ -113,8 +113,8 @@ Manually running `npm run dev` every time you make a change gets old pretty fast
 
 Instead, you can run the following command to watch your project for changes:
 
-```
-$ npm run watch
+```bash
+npm run watch
 ```
 
 Any time any file changes in your project, Webpack will recompile your assets, and Jigsaw will regenerate your static HTML pages to `/build_local`.
@@ -139,7 +139,7 @@ If you'd like to change the destination directory for your assets, edit the seco
 mix.jigsaw()
     .js('source/_assets/js/main.js', 'scripts')
     .postCss('source/_assets/css/main.css', 'styles')
-    ...
+    // ...
 ```
 
 ---
@@ -182,7 +182,7 @@ mix.jigsaw()
 
 You may choose to inline your CSS or JavaScript assets into the `<style>` or `<script>` tags in your page `<head>`, to save a network request and to avoid blocking the rest of the page from loading. The `inline` helper function will accomplish this:
 
-```
+```blade
 {{ inline(mix('css/main.css', 'assets/build')) }}
 ```
 

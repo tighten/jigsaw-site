@@ -37,14 +37,14 @@ This file is _merged_ on top of `config.php`, so you only need to specify the va
 
 To build files for a specific environment, just pass the environment name as an argument when running the `build` command:
 
-```
-$ ./vendor/bin/jigsaw build production
+```bash
+vendor/bin/jigsaw build production
 ```
 
 Alternatively, if you are [using Laravel Mix to compile your assets](/docs/compiling-assets), you can run the `production` script found in `package.json`:
 
-```
-$ npm run prod
+```bash
+npm run prod
 ```
 
 This will generate your site into a new folder called `build_production`, leaving your `build_local` folder untouched.

@@ -15,37 +15,37 @@ To use Jigsaw, you need to have PHP (minimum version 7.3) and [Composer](https:/
 
 First, create a new directory for your site:
 
-```
-$ mkdir my-site
+```bash
+mkdir my-site
 ```
 
 ### 2. Install Jigsaw via Composer
 
 Next, navigate to your new project directory and install Jigsaw using Composer:
 
-```
-$ cd my-site
-$ composer require tightenco/jigsaw
+```bash
+cd my-site
+composer require tightenco/jigsaw
 ```
 
 ### 3. Initialize your Project
 
 Finally, from your project directory, run Jigsaw's `init` command to scaffold the default directory structure:
 
-```
-$ ./vendor/bin/jigsaw init
+```bash
+vendor/bin/jigsaw init
 ```
 
 Alternatively, get up and running quickly by using a [starter template](/docs/starter-templates), which starts you off with a fully-configured, professionally-designed site, ready for you to customize with your content. You can use one of Jigsaw's built-in templates for a blog or an open source documentation site, or [use a third-party template](/docs/starter-templates#installing-a-third-party-starter-template).
 
-```
-$ ./vendor/bin/jigsaw init blog
+```bash
+vendor/bin/jigsaw init blog
 ```
 
 or
 
-```
-$ ./vendor/bin/jigsaw init docs
+```bash
+vendor/bin/jigsaw init docs
 ```
 
 ---

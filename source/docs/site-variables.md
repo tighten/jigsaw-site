@@ -19,7 +19,7 @@ return [
 
 ...you can use that variable in any of your templates like so:
 
-```
+```blade
 @extends('_layouts.master')
 
 @section('content')
@@ -29,7 +29,7 @@ return [
 
 If you prefer, site variables can also be accessed as arrays:
 
-```
+```blade
 <p>Contact us at {{ $page['contact_email'] }}</p>
 ```
 

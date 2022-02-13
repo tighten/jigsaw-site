@@ -15,21 +15,21 @@ The approach we use at Tighten for deploying Jigsaw sites to GitHub pages looks 
 
 1. Build your site for production
 
-    ```
-    $ npm run prod
-    ```
+```bash
+npm run prod
+```
 
 2. Commit the `build_production` folder to your repository
 
-    ```
-    $ git add build_production && git commit -m "Build for deploy"
-    ```
+```bash
+git add build_production && git commit -m "Build for deploy"
+```
 
 3. Use `git subtree push` to push _just_ the `build_production` folder to your `gh-pages` branch
 
-    ```
-    $ git subtree push --prefix build_production origin gh-pages
-    ```
+```bash
+git subtree push --prefix build_production origin gh-pages
+```
 
 ### Using Netlify
 
@@ -57,8 +57,8 @@ What you might not have known is that Amazon S3 also has first class support for
 
 To deploy a site to S3, first build your site for production:
 
-```
-$ ./vendor/bin/jigsaw build production
+```bash
+vendor/bin/jigsaw build production
 ```
 
 Then simply follow the steps in [Amazon's static site documentation](http://docs.aws.amazon.com/gettingstarted/latest/swh/website-hosting-intro.html) to deploy your `build_production` folder to your S3 bucket.
@@ -73,7 +73,7 @@ Jigsaw will look for your source files in a `source` directory, and will output 
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -81,38 +81,40 @@ return [
         'source' => 'src',
         'destination' => 'my_desination',
     ],
-    ...
+    // ...
+];
 ```
 
 Source and destination paths are relative to your project root, i.e where your config.php file is located.
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
     'build' => [
         'destination' => '../build-one-level-up',
     ],
-    ...
+    // ...
+];
 ```
 
 To include the environment name in your destination path, use the `{env}` token in your path name. `{env}` will be replaced by the environment specified when running the `build` command, and defaults to `local`.
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
     'build' => [
         'destination' => '../../{env}/public',
     ],
-    ...
+    // ...
+];
 ```
 
 In this example, running `./vendor/bin/jigsaw build staging` would output your built files to staging/public, two levels up from your project root. Jigsaw will create any directories that do not already exist.
 
 You can also assign different source and build paths for different environments by using multiple [environment-specific `config.php` files](/docs/environments/). Source and destination paths in `config.production.php`, for example, will get merged with any build paths that have been defined in `config.php` when running `./vendor/bin/jigsaw build production`.
-

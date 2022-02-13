@@ -12,7 +12,7 @@ A common use for filtering is to mark some blog posts as `published`, using a va
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [

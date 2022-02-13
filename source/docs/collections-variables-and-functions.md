@@ -14,7 +14,7 @@ Just as with site-wide variables, collection variables defined in `config.php` c
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -27,9 +27,9 @@ return [
 ];
 ```
 
-> __posts/blog-post-1.blade.php_
+> _\_posts/blog-post-1.blade.php_
 
-```
+```blade
 ---
 extends: _layouts.post
 title: My First Post
@@ -47,9 +47,9 @@ For this collection item, author will be *Keith Damiani*, the value from the YAM
 
 ---
 
-> __posts/blog-post-2.blade.php_
+> _\_posts/blog-post-2.blade.php_
 
-```
+```blade
 ---
 extends: _layouts.post
 title: My Second Post
@@ -64,11 +64,9 @@ title: My Second Post
 
 For this collection item, author will be *Default Blog Author*, the value from the `posts` array in `config.php`.
 
----
-
 > _about-us.blade.php_
 
-```
+```blade
 ---
 extends: _layouts.about
 title: About our company
@@ -83,14 +81,13 @@ title: About our company
 
 For this regular (non-collection) page, author will be *Default Site Author*, the value from the top level of `config.php.`
 
-
 ### Helper Functions
 
 Helper functions can be included in the collection settings array in `config.php`, and will be available to all of that collection's items. The same cascading rules that apply to variables also apply to functions, i.e. functions defined for a collection will override a function of the same name defined at the top level. For example:
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [

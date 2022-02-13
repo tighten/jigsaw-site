@@ -14,7 +14,7 @@ Layouts themselves are just basic Blade templates that have one or more `@yield`
 
 A basic master layout could look like this:
 
-```
+```blade
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,7 +28,7 @@ A basic master layout could look like this:
         @yield('content')
 
         <footer>
-            <p>©2016 Awesome Co</p>
+            <p>©{{ date('Y') }} Awesome Co</p>
         </footer>
     </body>
 </html>
@@ -40,7 +40,7 @@ Jigsaw provides a `/source/_layouts` directory out of the box with a basic maste
 
 To extend a layout, create a template that specifies which layout to extend in an `@extends` directive, and which section(s) to populate using the `@section` directive:
 
-```
+```blade
 @extends('_layouts.master')
 
 @section('content')
@@ -56,7 +56,7 @@ Layouts and partials are referenced relative to the `source` directory using _do
 
 To include a template inside of another template, use the `@include` directive:
 
-```
+```blade
 <!DOCTYPE html>
 <html>
     <head>
@@ -74,7 +74,7 @@ To include a template inside of another template, use the `@include` directive:
 
 You can pass data to a partial by passing an associative array as a second parameter:
 
-```
+```blade
 <!DOCTYPE html>
 <html>
     <head>
@@ -92,7 +92,7 @@ You can pass data to a partial by passing an associative array as a second param
 
 That data is then available in your partial as a normal variable:
 
-```
+```blade
 <!-- _partials/header.blade.php -->
 <header>
     {{ $page_title }}
@@ -105,7 +105,7 @@ Jigsaw supports both class based and anonymous Blade components.
 
 To display a component, you may use a Blade component tag within one of your Blade templates. Blade component tags start with the string x- followed by the kebab case name of the component class:
 
-```
+```blade
 <x-input />
 ```
 
@@ -115,7 +115,7 @@ Class-based components can be manually registered using `$bladeCompiler->compone
 
 > _composer.json_
 
-```
+```json
 "autoload": {
     "psr-4": {
         "Components\\": "where/you/want/to/keep/component/classes/"
@@ -173,7 +173,7 @@ For example, you can create a custom `@datetime($timestamp)` directive to format
 
 > _blade.php_
 
-```
+```php
 return [
     'datetime' => function ($timestamp) {
         return '<?php echo date("l, F j, Y", ' . $timestamp . '); ?>';
@@ -201,8 +201,8 @@ $bladeCompiler->include('includes.copyright');
 
 > _page.blade.php_
 
-```php
-/** before */
+```blade
+<!-- Before -->
 
 @component('_components.alert')
     Pay attention to this!
@@ -210,8 +210,7 @@ $bladeCompiler->include('includes.copyright');
 
 @include('_partials.meta.copyright', ['year' => '2018'])
 
-
-/** after */
+<!-- After -->
 
 @alert
     Pay attention to this!
