@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+
+/* Layout */
+
+.bg-gradient-purple {
+    background: #884992;
+    background: linear-gradient(to right, #703e84, #884992);
+}
+
+.container-content {
+    @apply px-4 mx-auto;
+
+    max-width: 75rem;
+}
+
+/* Typography */
+
+html {
+    font-size: 17px;
+}
+
+a {
+    @apply font-semibold no-underline;
+}
+
+h1 {
+    @apply text-3xl font-semibold;
+}
+
+h2 {
+    @apply text-2xl font-semibold;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+h4 {
+    @apply text-lg;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    @apply font-normal;
+}
+
+p {
+    @apply mb-5 text-base font-normal leading-normal text-blue-dark;
+}
+
+@screen md {
+    h1 {
+        @apply text-4xl;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+}
+
+/* File tree graphics */
+
+.files {
+    @apply px-8 py-4 mt-6 mb-10 mx-auto text-sm bg-white border border-indigo-lighter rounded;
+}
+
+.files .ellipsis {
+    @apply p-2 leading-none tracking-wide text-blue-dark;
+}
+
+.files .file {
+    @apply px-6 pt-2 text-blue-darker;
+}
+.files .file::before {
+    @apply absolute block fill-current text-blue-dark;
+
+    background-size: 40px 18px;
+    content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 224.16 86.11\"><path stroke=\"%23b0c1d3\" fill=\"%23ffffff\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"6px\" d=\"M173.53,1.5l-27,.09s-7.42,0-7.42,7.42V77.07s0,7.42,7.42,7.42h49.21s7.42,0,7.42-7.42l-.07-48.21Z\"/><polygon fill=\"%23b0c1d3\" stroke=\"none\" points=\"172.9 1.94 172.9 29.46 202.6 29.46 172.9 1.94\"/></svg>');
+    height: 18px;
+    margin-left: -46px;
+    width: 40px;
+}
+.files .file.focus {
+    @apply py-4 bg-grey-lighter rounded;
+
+    margin-left: -15px;
+    margin-top: 8px;
+    padding-left: 53px;
+}
+
+.files .folder {
+    @apply text-purple;
+
+    padding: 8px 0 0 28px;
+}
+.files .folder::before {
+    @apply absolute block;
+
+    background-size: 40px 18px;
+    content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 224.16 85.9\"><path fill=\"%23b0c1d3\" d=\"M63.39,46.77s4.49-3.61,0-7.21L38.29,19.41S33.8,15.8,33.8,21.56V64.77s0,5.76,4.49,2.15Z\"/><path fill=\"%23b0c1d3\" d=\"M220.75,74.77V25s0-8-8-8H176.41c-5.25,0-5.8-2.33-5.8-6.33,0-2.17-1.68-7-7.93-7H129.57s-8,0-8,8V74.77s0,8,8,8h83.17s8,0,8-8\"/></svg>');
+    height: 18px;
+    margin-left: -46px;
+    width: 40px;
+}
+.files .folder--open::before {
+    @apply absolute block;
+
+    background-size: 40px 18px;
+    content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 224.16 85.9\"><path fill=\"%23b0c1d3\" transform=\"rotate(90,50,40)\" d=\"M63.39,46.77s4.49-3.61,0-7.21L38.29,19.41S33.8,15.8,33.8,21.56V64.77s0,5.76,4.49,2.15Z\"/><path fill=\"%23b0c1d3\" d=\"M220.75,74.77V25s0-8-8-8H176.41c-5.25,0-5.8-2.33-5.8-6.33,0-2.17-1.68-7-7.93-7H129.57s-8,0-8,8V74.77s0,8,8,8h83.17s8,0,8-8\"/></svg>');
+    height: 18px;
+    margin-left: -46px;
+    width: 40px;
+}
+.files .folder.focus {
+    @apply py-3 bg-grey-lighter rounded;
+
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-top: 8px;
+    padding-left: 53px;
+}
+
+/* Markdown */
+
+.markdown a {
+    @apply text-purple-dark no-underline;
+}
+.markdown a:hover {
+    @apply text-purple-darker underline;
+}
+
+.markdown blockquote {
+    @apply px-6 py-2 my-4 text-grey border-l-4 border-grey-light;
+}
+.markdown blockquote > p {
+    @apply m-0;
+}
+
+.markdown code {
+    @apply inline w-4/5 text-sm leading-normal text-blue-dark bg-grey-lighter;
+
+    padding: 3px 7px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+    @apply mt-10 mb-4 text-blue-darker;
+}
+.markdown h1:first-child,
+.markdown h2:first-child,
+.markdown h3:first-child {
+    @apply mt-6;
+}
+
+.markdown h4 {
+    @apply mt-6 mb-2 text-blue-darker;
+}
+
+.markdown hr {
+    @apply mt-10 mb-4 border border-grey-light;
+}
+
+.markdown img {
+    @apply max-w-full;
+}
+
+.markdown ul {
+    @apply pl-2 my-4;
+}
+.markdown ul > li {
+    @apply pl-5 pb-1 ml-4 mb-2 leading-normal text-blue-dark list-none;
+}
+.markdown ul > li::before {
+    @apply absolute h-4 w-4 -ml-6 mt-1 bg-center bg-cover;
+
+    background-image: url('/assets/img/icon-arrow.svg');
+    content: '';
+}
+
+.markdown ol {
+    @apply pl-4 my-4;
+
+    list-style-type: decimal;
+}
+
+.markdown li {
+    @apply mb-3;
+}
+.markdown li > ul {
+    @apply pl-4;
+}
+
+.markdown p {
+    @apply my-5 text-base leading-normal text-blue-dark;
+}
+
+.markdown pre {
+    @apply px-4 pt-2 pb-3 mt-4 mb-8 leading-normal bg-grey rounded overflow-x-auto;
+
+    /* prevent code snippets from breaking width */
+    max-width: 43em;
+}
+.markdown pre > code {
+    @apply inline p-0 bg-transparent;
+}
+
+.markdown pre + blockquote {
+    @apply mt-6;
+}
+
+/* Code editor graphics */
+
+.editor-row {
+    @apply flex items-center mb-2;
+}
+@screen md {
+    .editor-row {
+        @apply mb-4;
+    }
+}
+
+.line-code {
+    @apply text-xs leading-normal font-mono font-light text-white;
+}
+
+.line-number {
+    @apply hidden w-4 mr-6 mb-0 text-xs font-mono font-light text-grey-lightest select-none;
+}
+@screen lg {
+    .line-number {
+        @apply block;
+    }
+}
+
+/* Docsearch */
+
+.algolia-autocomplete {
+    @apply w-full;
+}
+.algolia-autocomplete .ds-dropdown-menu {
+    @apply w-full;
+
+    min-width: auto !important;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--wrapper {
+    @apply border-b;
+
+    padding: 16px 0 !important;
+}
+
+@media (max-width: 768px) {
+    .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+        display: none !important;
+    }
+}
+
+.ds-input {
+    @apply w-full p-2 rounded text-blue-dark outline-none;
+}
+.ds-input::placeholder {
+    @apply text-blue-dark opacity-50;
+}
+
+@tailwind utilities;

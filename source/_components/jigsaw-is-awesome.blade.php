@@ -54,7 +54,7 @@
         @endcomponent
     </div>
     <div
-        class="absolute hidden md:flex flex-col right-0 w-82 lg:w-112 h-70 lg:h-76 justify-center items-center select-none lg:-mt-12 mr-4"
+        class="absolute hidden md:flex flex-col right-0 w-[26rem] lg:w-[32rem] h-80 lg:h-96 justify-center items-center select-none lg:-mt-12 mr-4"
         style="background:url('/assets/img/browser-illustration.svg') no-repeat center top; background-size: contain;"
     >
         <h1 class="text-grey-darker text-2xl lg:text-4xl">Jigsaw is awesome!</h1>

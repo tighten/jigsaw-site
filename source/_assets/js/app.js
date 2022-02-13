@@ -1,4 +1,4 @@
-let Vue = require('vue');
+import Vue from 'vue';
 
 import NavigationOnPage from './components/navigation-on-page.vue';
 import NavigationToggle from './components/navigation-toggle.vue';

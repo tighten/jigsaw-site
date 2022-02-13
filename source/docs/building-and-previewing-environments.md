@@ -44,7 +44,7 @@ $ ./vendor/bin/jigsaw build production
 Alternatively, if you are [using Laravel Mix to compile your assets](/docs/compiling-assets), you can run the `production` script found in `package.json`:
 
 ```
-$ npm run production
+$ npm run prod
 ```
 
 This will generate your site into a new folder called `build_production`, leaving your `build_local` folder untouched.

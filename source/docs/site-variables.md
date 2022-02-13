@@ -33,5 +33,5 @@ If you prefer, site variables can also be accessed as arrays:
 <p>Contact us at {{ $page['contact_email'] }}</p>
 ```
 
-Jigsaw also supports environment-specific site variables, which you can learn more about [here](/docs/environments/).
+Jigsaw also supports environment-specific site variables, which you can learn more about [here](/docs/building-and-previewing-environments/).
 

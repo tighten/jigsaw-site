@@ -6,7 +6,7 @@
     </p>
 
 
-    <div class="flex flex-wrap max-w-xs sm:max-w-xl h-32 mb-8 px-8 py-3">
+    <div class="flex flex-wrap max-w-xs sm:max-w-4xl h-32 mb-8 px-8 py-3">
         <img class="w-1/2 sm:w-1/4 p-3 sm:p-4 md:p-6 sm:bg-white sm:border sm:border-r-0 border-indigo-lighter rounded-l-lg" src="/assets/img/less-logo.svg" alt="Less logo">
 
         <div class="w-1/2 sm:w-1/4 flex flex-col items-center justify-center py-5 px-0 sm:px-4 md:px-6 sm:bg-white sm:border sm:border-r-0 border-indigo-lighter">

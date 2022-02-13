@@ -13,7 +13,7 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/fac7rzg.css">
 
-        <link rel="stylesheet" type="text/css" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css', 'assets/build') }}">
 
         <link href='https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 
@@ -22,7 +22,7 @@
 
     <body class="min-h-screen font-sans leading-tight">
         <main id="vue-app">
-            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+            <div class="w-full bg-brown-lightest border-t-[5px] border-purple"></div>
 
             @yield('body')
         </main>

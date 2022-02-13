@@ -11,7 +11,7 @@
                 modern developers
             </h1>
 
-            <p class="max-w-md mt-4 text-grey-dark lead">
+            <p class="max-w-xl mt-4 text-grey-dark text-lg md:text-xl leading-normal">
                 Jigsaw is a framework for rapidly building static sites using the <br class="hidden sm:block">
                 same modern tooling that powers your web applications.
             </p>
