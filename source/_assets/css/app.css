@@ -235,11 +235,11 @@ p {
     @apply text-xs leading-normal font-mono font-light text-white;
 }
 
-.line-number {
+.ln {
     @apply hidden w-4 mr-6 mb-0 text-xs font-mono font-light text-grey-lightest select-none;
 }
 @screen lg {
-    .line-number {
+    .ln {
         @apply block;
     }
 }
