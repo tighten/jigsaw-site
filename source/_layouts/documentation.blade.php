@@ -44,13 +44,19 @@
         <navigation-on-page :headings="pageHeadings"></navigation-on-page>
     </div>
 
-    <footer class="py-8 flex flex-col sm:flex-row justify-center items-center text-center">
-        <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
-            <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
-        </p>
+    <footer class="flex flex-col items-center py-8">
+        <div class="flex flex-col sm:flex-row items-center justify-center">
+            <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">
+                Brought to you by the lovely humans at
+                <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
+            </p>
 
-        <a href="https://github.com/tighten/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1"
-            title="Jigsaw on GitHub">Issues/Feature Requests</a>
+            <a href="https://github.com/tighten/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1" title="Jigsaw on GitHub">
+                Issues/Feature Requests
+            </a>
+        </div>
+
+        <p class="text-grey-dark text-xs mt-4">Code hightlighting by <a href="https://torchlight.dev" class="font-normal text-grey-darker hover:text-purple-darker">Torchlight</a></p>
     </footer>
 </div>
 @endsection

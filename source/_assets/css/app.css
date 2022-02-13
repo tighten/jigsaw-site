@@ -69,7 +69,7 @@ p {
     }
 }
 
-/* Code snippets / Torchlight */
+/* Code snippets & Torchlight */
 
 pre {
     @apply my-4 leading-loose border border-grey-light rounded-md overflow-x-auto;
