@@ -69,6 +69,22 @@ p {
     }
 }
 
+/* Code snippets / Torchlight */
+
+pre {
+    @apply my-4 leading-loose border border-grey-light rounded-md overflow-x-auto;
+}
+pre code.torchlight {
+    @apply inline-block py-4 text-sm rounded-md;
+}
+pre code.torchlight .line {
+    @apply px-4;
+}
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+    @apply mr-4;
+}
+
 /* File tree graphics */
 
 .files {
@@ -147,12 +163,6 @@ p {
     @apply m-0;
 }
 
-.markdown code {
-    @apply inline w-4/5 text-sm leading-normal text-blue-dark bg-grey-lighter;
-
-    padding: 3px 7px;
-}
-
 .markdown h1,
 .markdown h2,
 .markdown h3 {
@@ -177,10 +187,10 @@ p {
 }
 
 .markdown ul {
-    @apply pl-2 my-4;
+    @apply pl-2 my-4 list-none;
 }
 .markdown ul > li {
-    @apply pl-5 pb-1 ml-4 mb-2 leading-normal text-blue-dark list-none;
+    @apply pl-5 pb-1 ml-4 mb-2 leading-normal text-blue-dark;
 }
 .markdown ul > li::before {
     @apply absolute h-4 w-4 -ml-6 mt-1 bg-center bg-cover;
@@ -190,9 +200,10 @@ p {
 }
 
 .markdown ol {
-    @apply pl-4 my-4;
-
-    list-style-type: decimal;
+    @apply pl-2 my-4 list-decimal;
+}
+.markdown ol > li {
+    @apply pl-2 pb-1 ml-4 mb-2 leading-normal text-blue-dark;
 }
 
 .markdown li {
@@ -206,14 +217,9 @@ p {
     @apply my-5 text-base leading-normal text-blue-dark;
 }
 
-.markdown pre {
-    @apply px-4 pt-2 pb-3 mt-4 mb-8 leading-normal bg-grey rounded overflow-x-auto;
-
-    /* prevent code snippets from breaking width */
-    max-width: 43em;
-}
-.markdown pre > code {
-    @apply inline p-0 bg-transparent;
+.markdown p code,
+.markdown li code {
+    @apply inline px-1.5 py-0.5 text-sm text-blue-dark bg-grey-lighter rounded;
 }
 
 .markdown pre + blockquote {

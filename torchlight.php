@@ -9,9 +9,9 @@ return [
     'request_timeout' => 15,
     'options' => [
         'lineNumbers' => true,
-        // 'lineNumbersStyle' => '',
+        'lineNumbersStyle' => '',
         'diffIndicators' => true,
         'diffIndicatorsInPlaceOfLineNumbers' => true,
-        // 'summaryCollapsedIndicator' => '...',
+        'summaryCollapsedIndicator' => '...',
     ],
 ];
