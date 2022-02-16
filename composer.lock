@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edaf4323120c114f44acdecd684d213d",
+    "content-hash": "5456de099c32c32c42bdb283e9aa12c9",
     "packages": [
         {
             "name": "brick/math",
@@ -4491,21 +4491,21 @@
         },
         {
             "name": "torchlight/torchlight-jigsaw",
-            "version": "v0.2.1",
+            "version": "v0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/torchlight-api/torchlight-jigsaw.git",
-                "reference": "ec7ba186ee178f89466cead62d43d0485615017c"
+                "reference": "126409f3c57ed1996a9513565e2f05f4eb900f06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torchlight-api/torchlight-jigsaw/zipball/ec7ba186ee178f89466cead62d43d0485615017c",
-                "reference": "ec7ba186ee178f89466cead62d43d0485615017c",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-jigsaw/zipball/126409f3c57ed1996a9513565e2f05f4eb900f06",
+                "reference": "126409f3c57ed1996a9513565e2f05f4eb900f06",
                 "shasum": ""
             },
             "require": {
                 "tightenco/jigsaw": "^1.3.27",
-                "torchlight/torchlight-laravel": "^0.5.0"
+                "torchlight/torchlight-laravel": "v0.5.10"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.4"
@@ -4537,9 +4537,9 @@
             ],
             "support": {
                 "issues": "https://github.com/torchlight-api/torchlight-jigsaw/issues",
-                "source": "https://github.com/torchlight-api/torchlight-jigsaw/tree/v0.2.1"
+                "source": "https://github.com/torchlight-api/torchlight-jigsaw/tree/v0.3.3"
             },
-            "time": "2021-08-03T21:24:17+00:00"
+            "time": "2022-02-15T23:47:21+00:00"
         },
         {
             "name": "torchlight/torchlight-laravel",
