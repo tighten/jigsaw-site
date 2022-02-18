@@ -10,7 +10,7 @@ To display each of your collection items on their own page, you need to specify 
 
 > _my-first-post.md_
 
-```
+```markdown
 ---
 extends: _layouts.post
 title: My First Blog Post
@@ -24,7 +24,7 @@ This post is *profoundly* interesting.
 
 > _my-second-post.blade.php_
 
-```
+```blade
 ---
 title: My Second Blog Post
 author: Keith Damiani
@@ -45,9 +45,9 @@ However, parent templates are optional for collection items. In some cases—suc
 
 Collection items can also extend _multiple_ parent templates, by specifying the templates as an array in the `extends` key in the YAML front matter. This will generate a separate URL for each template—allowing, for example, a collection item to have both `/web/item` and `/api/item` endpoints, or `/summary` and `/detail` views.
 
-> __people/abraham-lincoln.md_
+> _\_people/abraham-lincoln.md_
 
-```
+```markdown
 ---
 name: Abraham Lincoln
 role: President
@@ -60,9 +60,9 @@ section: content
 ...
 ```
 
-> __layouts.person.blade.php_
+> _\_layouts.person.blade.php_
 
-```
+```blade
 @extends('_layouts.master')
 
 @section('body')
@@ -75,10 +75,10 @@ section: content
 @endsection
 ```
 
-> __layouts.api.person.blade.js_
+> _\_layouts.api.person.blade.js_
 
-```
-{!! ($page->api()) !!}
+```blade
+{!! $page->api() !!}
 ```
 
 
@@ -86,7 +86,7 @@ If using multiple parent templates, you can specify separate paths in `config.ph
 
 > _config.php_
 
-```
+```php
 <?php
 
 use Illuminate\Support\Str;

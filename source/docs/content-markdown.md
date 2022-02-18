@@ -12,9 +12,9 @@ Using Markdown in Jigsaw is as simple as using a ` .markdown` or `.md` extension
 
 For example, say you have this layout and you'd like to populate the `content` section using Markdown:
 
-```html
+```blade
 <html>
-    <head>...</head>
+    <head><!-- ... --></head>
     <body>
         @yield('content')
     </body>
@@ -38,7 +38,7 @@ The end result would be a generated page that looked like this:
 
 ```html
 <html>
-    <head>...</head>
+    <head><!-- ... --></head>
     <body>
         <h1>My awesome heading!</h1>
         <p>My awesome content!</p>
@@ -50,9 +50,9 @@ The end result would be a generated page that looked like this:
 
 Imagine you have a layout named `post.blade.php` in your `_layouts` folder that looks like this:
 
-> __layouts/post.blade.php_
+> _\_layouts/post.blade.php_
 
-```html
+```blade
 @extends('_layouts.master')
 
 @section('content')
@@ -82,14 +82,12 @@ Jigsaw is one of the greatest static site generators of all time.
 
 ```html
 <html>
-    <head>...</head>
+    <head><!-- ... --></head>
     <body>
         <h1>Jigsaw is awesome!</h1>
         <h2>by Adam Wathan</h2>
 
-        <p>
-            Jigsaw is one of the greatest static site generators of all time.
-        </p>
+        <p>Jigsaw is one of the greatest static site generators of all time.</p>
     </body>
 </html>
 ```
@@ -111,9 +109,9 @@ date: 2018-02-16
 ---
 ```
 
-> __layouts/post.blade.php_
+> _\_layouts/post.blade.php_
 
-```html
+```blade
 <p>The formatted date is {{ date('F j, Y', $post->date) }}</p>
 ```
 
@@ -126,7 +124,7 @@ You can specify a `permalink` in the YAML front matter to override the default p
 
 > _source/404.md_
 
-```
+```markdown
 ---
 extends: _layouts.master
 section: content

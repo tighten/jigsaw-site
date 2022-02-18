@@ -14,7 +14,7 @@ For instance, you can add a method that identifies if the current page belongs t
 
 > _config.php_
 
-```
+```php
 <?php
 
 use Illuminate\Support\Str;
@@ -31,9 +31,9 @@ This method is accessible by calling `$page->selected()` from any page.
 
 Now, we can build a menu partial that highlights the current menu item for each page:
 
-> __menu.blade.php_
+> _\_menu.blade.php_
 
-```
+```blade
 <a class="{{ $page->selected('about') }}" href="{{ $page->baseUrl }}/about">About Us</a>
 <a class="{{ $page->selected('projects') }}" href="{{ $page->baseUrl }}/projects">Projects</a>
 <a class="{{ $page->selected('posts') }}" href="{{ $page->baseUrl }}/posts">Blog</a>

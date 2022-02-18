@@ -2,5 +2,6 @@
 /cache/
 /node_modules/
 /source/assets/build/
+/torchlight_cache/
 /vendor/
-.DS_Store
+.env

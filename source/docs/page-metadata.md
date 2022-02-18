@@ -7,7 +7,6 @@ section: documentation_content
 
 For each page, Jigsaw provides you with certain metadata values through `get` functions accessed on the `$page` object:
 
-
 `$page->getPath()` returns the path to the current page, relative to the site root
 
 `$page->getRelativePath()` returns the relative path (i.e. parent directories) of the current page, relative to the site root

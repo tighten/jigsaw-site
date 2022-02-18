@@ -17,29 +17,29 @@ Jigsaw gives you the ability to customize your collection paths, however, by add
 
 You can specify your collection path as a string. In this string, you can reference the values of any variables that are defined within the YAML front matter of the collection item, by specifying the variable name enclosed in `{}` brackets. If your collection items each include a `title` variable, for example, you could define your path as:
 
-```
-'path' => 'blog/{title}'                             // 'blog/Title Of First Post'
+```php
+'path' => 'blog/{title}' // 'blog/Title Of First Post'
 ```
 
 In addition, the variables `filename` (containing the filename without extension) and `collection` (containing the collection name) are available:
 
-```
-'path' => '{collection}/{filename}'                  // 'posts/my first blog post'
+```php
+'path' => '{collection}/{filename}' // 'posts/my first blog post'
 ```
 
 In most cases, when using filenames or titles, you will want to "slugify" them when used as part of a path. To do so, prepend a separator to the variable name:
 
-```
-'path' => '{collection}/{-filename}'                 // 'posts/my-first-blog-post'
-'path' => '{collection}/{_filename}'                 // 'posts/my_first_blog_post'
+```php
+'path' => '{collection}/{-filename}' // 'posts/my-first-blog-post'
+'path' => '{collection}/{_filename}' // 'posts/my_first_blog_post'
 ```
 
 If you included a date as a variable in your collection items (in YYYY-MM-DD format), you can control the formatting of that date in your path by following the variable name with a pipe and using PHP date formatting codes. For any `/`s in your date formatting code, Jigsaw will create subdirectories as needed:
 
-```
-'path' => '{collection}/{published|Y-m-d}/{-title}'  // 'posts/2017-03-27/title-of-first-post'
-'path' => '{collection}/{published|Y/m}/{-title}'    // 'posts/2017/03/title-of-first-post'
-'path' => 'blog-{published|F-Y}/{-title}'            // 'blog-March-2017/title-of-first-post'
+```php
+'path' => '{collection}/{published|Y-m-d}/{-title}' // 'posts/2017-03-27/title-of-first-post'
+'path' => '{collection}/{published|Y/m}/{-title}' // 'posts/2017/03/title-of-first-post'
+'path' => 'blog-{published|F-Y}/{-title}' // 'blog-March-2017/title-of-first-post'
 ```
 
 
@@ -47,7 +47,7 @@ If you included a date as a variable in your collection items (in YYYY-MM-DD for
 
 Though the path shorthand allows you to easily create the most common permalink formats, you can also return a closure from `path` if you require more control. The closure will receive the contents of the current collection item as its first parameter. For example:
 
-```
+```php
 use Illuminate\Support\Str;
 
 'path' => function ($page) {

@@ -15,7 +15,7 @@ To define a collection, add an array named `collections` to `config.php`. Each c
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -72,7 +72,7 @@ In `config.php`, the array where you define your collection can contain [path](/
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -86,7 +86,7 @@ If you'd like to generate an individual page for each of your collection itemsâ€
 
 > _my-first-post.md_
 
-```
+```markdown
 ---
 extends: _layouts.post
 title: My First Blog Post
@@ -98,9 +98,9 @@ section: content
 This post is *profoundly* interesting.
 ```
 
-> __layouts/post.blade.php_
+> _\_layouts/post.blade.php_
 
-```
+```blade
 @extends('_layouts.master')
 
 @section('body')
@@ -120,7 +120,7 @@ For example, to create a list of the titles for all your blog posts, you can ite
 
 > _posts.blade.php_
 
-```
+```blade
 <p>Total of {{ $posts->count() }} posts</p>
 
 <ul>
@@ -134,12 +134,12 @@ For example, assuming that all posts have on their YAML front matter the propert
 
 > _author\_posts.blade.php_
 
-```
-<?php
-$authorPosts = $posts->filter(function ($value, $key) use ($page) {
-    return $value->author == $page->author;
-});
-?>
+```blade
+@php
+    $authorPosts = $posts->filter(function ($value, $key) use ($page) {
+        return $value->author == $page->author;
+    });
+@endphp
 
 @if ($authorPosts->count() > 0)
     <ul>
@@ -160,9 +160,9 @@ In addition to the [metadata](/docs/page-metadata/) available for every page, su
 - `getFirst()` returns the first item of a collection (as does the Laravel collection method `first()`)
 - `getLast()` returns the last item of a collection (as does the Laravel collection method `last()`)
 
-> __layouts/post.blade.php_
+> _\_layouts/post.blade.php_
 
-```
+```blade
 @extends('_layouts.master')
 
 @section('body')

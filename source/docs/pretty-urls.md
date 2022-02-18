@@ -36,7 +36,6 @@ For example, if you have a file named `about-us.blade.php` in your `/source` dir
     <div class="ellipsis">...</div>
 </div>
 
-
 This means your "About us" page will be available at `http://example.com/about-us/` instead of `http://example.com/about-us.html`.
 
 ### Disabling Pretty URLs

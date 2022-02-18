@@ -13,22 +13,22 @@
         <div class="w-full md:w-1/2">
             @component('_components.code-editor')
                 <div class="editor-row">
-                    <p class="line-number">1</p>
+                    <p class="ln">1</p>
                     <div class="line-code">@@extends('_layouts.master')</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">2</p>
+                    <p class="ln">2</p>
                     <div class="line-code">@@section('body')</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">3</p>
+                    <p class="ln">3</p>
                     <div class="line-code ml-4"><span class="text-pink-dark">&lt;h1&gt;</span>Hello World<span class="text-pink-dark">&lt;/h1&gt;</span></div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">4</p>
+                    <p class="ln">4</p>
                     <div class="line-code">@@endsection</div>
                 </div>
             @endcomponent
@@ -54,37 +54,37 @@
         <div class="w-full md:w-1/2">
             @component('_components.code-editor')
                 <div class="editor-row">
-                    <p class="line-number">1</p>
+                    <p class="ln">1</p>
                     <div class="line-code">---</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">2</p>
+                    <p class="ln">2</p>
                     <div class="line-code">extends: layouts.post</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">3</p>
+                    <p class="ln">3</p>
                     <div class="line-code">section: content</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">4</p>
+                    <p class="ln">4</p>
                     <div class="line-code">---</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">5</p>
+                    <p class="ln">5</p>
                     <div class="line-code"></div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">6</p>
+                    <p class="ln">6</p>
                     <div class="line-code"># Hello World!</div>
                 </div>
 
                 <div class="editor-row">
-                    <p class="line-number">7</p>
+                    <p class="ln">7</p>
                     <div class="line-code">Welcome to the future.</div>
                 </div>
             @endcomponent

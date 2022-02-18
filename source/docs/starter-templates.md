@@ -8,13 +8,13 @@ section: documentation_content
 To get you up and running with a fully-configured site quickly, Jigsaw includes two "starter templates"—one for a blog, one for open source documentation—that are ready for you to customize with your content. To use these templates as your starting point, simply add the name of the template to the `init` command:
 
 ```bash
-./vendor/bin/jigsaw init blog
+vendor/bin/jigsaw init blog
 ```
 
 or
 
 ```bash
-./vendor/bin/jigsaw init docs
+vendor/bin/jigsaw init docs
 ```
 
 Both the `blog` and `docs` starter templates include samples of common page types, and come pre-configured with:
@@ -60,7 +60,7 @@ The `blog` template also includes:
 You can also install a starter template that was created by a third party. Third-party templates that are registed as Composer packages on [Packagist](https://packagist.org/) can be installed by specifying the vendor and package name when running the `init` command:
 
 ```bash
-./vendor/bin/jigsaw init tightenco/jigsaw-netlify-template
+vendor/bin/jigsaw init tightenco/jigsaw-netlify-template
 ```
 
 ---

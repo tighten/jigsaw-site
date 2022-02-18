@@ -13,7 +13,7 @@ Some hosts, like GitHub Pages and Netlify, are automatically configured to look 
 
 > _source/404.md_
 
-```
+```markdown
 ---
 extends: _layouts.master
 section: content
@@ -33,7 +33,7 @@ You can create your custom 404 file as `404.md` or `404.blade.php` in your `sour
 
 > _source/404.md_
 
-```
+```markdown
 ---
 extends: _layouts.master
 section: content
@@ -46,15 +46,14 @@ When hosting your site on an Nginx server, you will need to configure the `error
 
 Once you've located your Nginx configuration file, add the following line to the `server` block:
 
-```
+```nginx
 error_page 404 /404;
 ```
 
 In addition, if it is not already there, make sure the following line appears in the section of your configuration file that begins with `location ~ \.php$ {`:
 
-```
+```nginx
 fastcgi_intercept_errors on;
 ```
 
 After you restart your Nginx server, it will look for the error page `/404/index.html` in your `build` directory whenever someone navigates to a page that does not exist.
-

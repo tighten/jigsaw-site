@@ -1,3 +1,8 @@
 <?php
 
-$events->afterBuild(App\Listeners\GenerateSitemap::class);
+use App\Listeners\GenerateSitemap;
+use Torchlight\Jigsaw\TorchlightExtension;
+
+$events->afterBuild(GenerateSitemap::class);
+
+TorchlightExtension::make($container, $events)->boot();

@@ -19,7 +19,7 @@ Jigsaw provides three events that you can hook into, in order to run custom code
 
 To add an event listener, head over to `bootstrap.php`. There, you can access the event bus with the `$events` variable, adding listeners by calling the name of the event:
 
->_bootstrap.php_
+> _bootstrap.php_
 
 ```php
 $events->beforeBuild(function ($jigsaw) {
@@ -39,7 +39,7 @@ At its simplest, you can define your event listeners as closures that accept an 
 
 For example, the following listener will fetch the current weather from an external API, and add it as a variable to `config.php`, where it can be referenced in your templates:
 
->_bootstrap.php_
+> _bootstrap.php_
 
 ```php
 $events->beforeBuild(function ($jigsaw) {
@@ -64,15 +64,15 @@ For more complex event listeners, you can specify the name of a class, or an arr
 ```php
 $events->afterBuild(GenerateSitemap::class);
 
-// or
-
 $events->afterBuild([GenerateSitemap::class, SendNotification::class]);
 ```
 
->_listeners/GenerateSitemap.php_
+> _listeners/GenerateSitemap.php_
 
 ```php
-<?php namespace App\Listeners;
+<?php
+
+namespace App\Listeners;
 
 use TightenCo\Jigsaw\Jigsaw;
 use samdark\sitemap\Sitemap;
@@ -104,7 +104,7 @@ If there are multiple listeners defined for a single event, they will be fired i
 
 To call a listener class that lives in a separate directory, the class namespace should be added to a `composer.json` file:
 
->_composer.json_
+> _composer.json_
 
 ```json
 {
@@ -117,6 +117,7 @@ To call a listener class that lives in a separate directory, the class namespace
 ```
 
 ---
+
 <a name="helperMethods"></a>
 ### Helper methods in $jigsaw
 
@@ -217,6 +218,3 @@ Returns the contents of a file in the `build` directory
 `writeOutputFile($fileName, $contents)`
 
 Allows you to write a file to the `build` directory
-
----
-

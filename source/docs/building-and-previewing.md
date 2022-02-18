@@ -7,7 +7,9 @@ section: documentation_content
 
 When you'd like to generate your site, run the `build` command from within your project root:
 
-`$ ./vendor/bin/jigsaw build`
+```bash
+vendor/bin/jigsaw build
+```
 
 Jigsaw will generate your static HTML and place it in the `/build_local` directory by default.
 
@@ -41,13 +43,17 @@ Using the default site structure, `/build_local` will look like this:
 
 To quickly preview your site, use the `serve` command:
 
-`$ ./vendor/bin/jigsaw serve`
+```bash
+vendor/bin/jigsaw serve
+```
 
 You can now view your site at `http://localhost:8000` in your browser.
 
 You can also optionally specify the environment and port to serve like so:
 
-`$ ./vendor/bin/jigsaw serve production --port=8080`
+```bash
+vendor/bin/jigsaw serve production --port=8080
+```
 
 This will serve your `/build_production` directory at `http://localhost:8080`.
 
@@ -55,8 +61,8 @@ This will serve your `/build_production` directory at `http://localhost:8080`.
 
 If you are [using Laravel Mix to compile your assets](/docs/compiling-assets) (which is included in the default Jigsaw setup), you can preview your site with Browsersync by simply running:
 
-```
-$ npm run watch
+```bash
+npm run watch
 ```
 
 _(If you haven't already, you'll need to run `npm install` before running `npm run watch`.)_

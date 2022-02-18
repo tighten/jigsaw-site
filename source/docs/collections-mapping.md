@@ -10,7 +10,7 @@ You can map over your collection items by adding a `map` key to the collection's
 
 > _config.php_
 
-```
+```php
 <?php
 
 return [
@@ -26,7 +26,7 @@ return [
 
 Your custom `Post` class should extend `TightenCo\Jigsaw\Collection\CollectionItem`, and could include helper functions, reference and/or modify page variables, etc.:
 
-```
+```php
 <?php
 
 use TightenCo\Jigsaw\Collection\CollectionItem;
