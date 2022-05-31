@@ -12,6 +12,9 @@
 
         <p class="font-bold text-lg mb-10">FieldGoal solves that.</p>
 
-        <a href="https://fieldgoal.io" class="hover:bg-grey-light text-grey-darker hover:text-purple-dark no-underline tracking-wide uppercase rounded-lg text-sm bg-grey-lightest shadow-md hover:shadow-lg py-4 px-6">Visit fieldgoal.io</a>
+        <a href="https://fieldgoal.io"  title="Visit fieldgoal.io"
+            class="hover:bg-grey-light text-grey-darker hover:text-purple-dark no-underline tracking-wide uppercase rounded-lg text-sm bg-grey-lightest shadow-md hover:shadow-lg py-4 px-6">
+            Visit fieldgoal.io
+        </a>
     </div>
 </section>
