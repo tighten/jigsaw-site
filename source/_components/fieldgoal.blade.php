@@ -1,9 +1,9 @@
 <section class="bg-brown-lightest py-12 md:py-16 px-4 sm:px-6">
     <div class="container-content flex flex-col items-center text-center">
         <div class="w-full max-w-xs flex justify-around items-center mb-12">
-            <img class="w-1/3 p-1 bg-white rounded-lg shadow border-2 border-white" src="/assets/img/jigsaw-logo.svg" alt="Jigsaw logo">
+            <img class="w-1/3 bg-white rounded-2xl sm:rounded-3xl shadow border-4 border-white" src="/assets/img/jigsaw-logo.svg" alt="Jigsaw logo">
             <span class="font-bold text-blue-darker text-4xl">+</span>
-            <img class="w-1/3" src="/assets/img/fieldgoal-logo.svg" alt="FieldGoal logo">
+            <img class="w-1/3 bg-white rounded-2xl sm:rounded-3xl shadow border-4 border-white" src="/assets/img/fieldgoal-logo.svg" alt="FieldGoal logo">
         </div>
 
         <h2 class="text-blue-darker text-2xl md:text-4xl font-normal mb-6">Don't build a whole backend<br> just for one stupid form.</h2>
