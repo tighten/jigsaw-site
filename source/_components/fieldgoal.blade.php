@@ -1,6 +1,6 @@
 <section class="bg-brown-lightest py-12 md:py-16 px-4 sm:px-6">
     <div class="container-content flex flex-col items-center text-center">
-        <div class="w-full max-w-xs flex justify-between items-center mb-12">
+        <div class="w-full max-w-xs flex justify-around items-center mb-12">
             <img class="w-1/3 p-1 bg-white rounded-lg shadow border-2 border-white" src="/assets/img/jigsaw-logo.svg" alt="Jigsaw logo">
             <span class="font-bold text-blue-darker text-4xl">+</span>
             <img class="w-1/3" src="/assets/img/fieldgoal-logo.svg" alt="FieldGoal logo">
