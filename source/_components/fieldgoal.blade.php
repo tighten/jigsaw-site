@@ -6,9 +6,9 @@
             <img class="w-1/3" src="/assets/img/fieldgoal-logo.svg" alt="FieldGoal logo">
         </div>
 
-        <h2 class="text-blue-darker text-2xl md:text-4xl mb-6">Don't build a whole backend<br>just for one stupid form</h2>
+        <h2 class="text-blue-darker text-2xl md:text-4xl font-normal mb-6">Don't build a whole backend<br>just for one stupid form.</h2>
 
-        <p class="text-grey-dark text-lg mb-10">Is one stupid form preventing you from<br>building a static site with Jigsaw?</p>
+        <p class="text-grey-dark text-lg mb-10">Is one stupid form preventing you from<br>building a static site with <span class="font-bold">Jigsaw?</span></p>
 
         <p class="font-bold text-lg mb-10">FieldGoal solves that.</p>
 
