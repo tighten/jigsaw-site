@@ -20,6 +20,7 @@
 
     @include('_components.jigsaw-is-awesome')
     @include('_components.getting-started')
+    @include('_components.fieldgoal')
     @include('_components.features')
     @include('_components.compile-your-assets')
     @include('_components.built-with-jigsaw')
