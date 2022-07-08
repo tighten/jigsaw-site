@@ -192,3 +192,16 @@ You may choose to inline your CSS or JavaScript assets into the `<style>` or `<s
 
 To prevent URLs in your `.scss` files—such as background images and fonts—from being processed and modified by Mix, make sure the `processCssUrls` option is set to `false` in your `webpack.mix.js` file.
 
+### Note about using Tailwind CSS version 3
+
+Jigsaw uses Tailwind CSS version 2 by default. To use Tailwind CSS version 3, make sure to update the `tailwind.config` file to reflect the [Tailwind CSS v3 configuration](https://tailwindcss.com/docs/upgrade-guide#configure-content-sources). Use specific paths in your `content` array and only include directories that won't change when your CSS builds:
+
+```js
+module.exports = {
+    content: [
+        'source/index.blade.php',
+        'source/_layouts/**/*.blade.php',
+        'source/_assets/**/*.{js,css},
+    ]
+}
+```
