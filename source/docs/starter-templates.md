@@ -40,7 +40,7 @@ The `blog` template also includes:
 ---
 
 <a class="block pt-6" href="http://jigsaw-blog-staging.tighten.co/" target="_blank">
-    ![Screenshot of Jigsaw blog starter template](/assets/img/template-blog.png) {.border .shadow .rounded}
+    ![Screenshot of Jigsaw blog starter template](/assets/img/template-blog-new.png) {.border .shadow .rounded}
 </a>
 
 <a href="http://jigsaw-blog-staging.tighten.co/" target="_blank">View a preview of the blog template</a>
