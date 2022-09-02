@@ -12,6 +12,8 @@ A common use for filtering is to mark some blog posts as `published`, using a va
 
 > Note that by default, variables from environment-specific config files are _not_ merged recursively; only the top-level keys are considered for merging. For collections, you can override this behavior by setting `merge_collection_configs` to `true` in your main `config.php` file. This will allow you to only specify the environment-specific changes to your `collections` settings.
 
+---
+
 > _config.php_
 
 ```php
