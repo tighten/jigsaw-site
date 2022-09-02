@@ -33,7 +33,7 @@ return [
 
 This file is _merged_ on top of `config.php`, so you only need to specify the variables that you are changing.
 
-> Note: Variables from environment-specific config files are _not_ merged recursively; only the top-level keys are considered for merging. For collections, you can override this behavior by setting `merge_collection_configs` to `true` in your main `config.php` file. This is particularly useful if you use [collection filtering](docs/collections-filtering/) to disable some collection items, such as draft blog posts, in particular environments.
+> Note: Variables from environment-specific config files are _not_ merged recursively; only the top-level keys are considered for merging. For collections, you can override this behavior by setting `merge_collection_configs` to `true` in your main `config.php` file. This is particularly useful if you use [collection filtering](/docs/collections-filtering/) to disable some collection items, such as draft blog posts, in particular environments.
 
 ### Building files for a specific environment
 
