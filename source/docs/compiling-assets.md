@@ -119,8 +119,6 @@ npm run watch
 
 Any time any file changes in your project, Webpack will recompile your assets, and Jigsaw will regenerate your static HTML pages to `/build_local`.
 
-You can also watch a specific environment by running `npm run local`, `npm run staging`, or `npm run prod`.
-
 ---
 
 ### Changing asset locations

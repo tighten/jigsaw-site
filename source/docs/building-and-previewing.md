@@ -41,15 +41,13 @@ Using the default site structure, `/build_local` will look like this:
 
 ### Watching files for changes
 
-To compile the assets and keep watching your project for changes you can run the following command:
+To compile your site's assets and keep watching for changes, you can run the following command:
 
 ```bash
 npm run watch
 ```
 
-Your project will open at a localhost URL and any time any file changes in your project, Webpack will recompile your assets, and Jigsaw will regenerate your static HTML pages to `/build_local`.
-
-You can also watch a specific environment by running `npm run local`, `npm run staging`, or `npm run prod`.
+Now, any time a file changes in your project, webpack will recompile your assets and Jigsaw will regenerate your updated static HTML pages to `/build_local`.
 
 ### Previewing with PHP
 
