@@ -68,3 +68,5 @@ npm run watch
 _(If you haven't already, you'll need to run `npm install` before running `npm run watch`.)_
 
 Browsersync will automatically open a new browser tab and reload the page every time you make a change. Very helpful for previewing your changes quickly!
+
+Browsersync is only included in the [starter template](/docs/starter-templates) Jigsaw installation. If you are using the default Jigsaw installation, you will need to add it yourself.

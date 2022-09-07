@@ -5,7 +5,7 @@ section: documentation_content
 
 ## Compiling Assets with Laravel Mix
 
-Jigsaw sites are configured with support for [Laravel Mix](https://laravel.com/docs/7.x/mix) out of the box. If you've ever used Mix in a Laravel project, you already know how to use Mix with Jigsaw.
+Jigsaw sites are configured with support for [Laravel Mix](https://laravel.com/docs/mix) out of the box. If you've ever used Mix in a Laravel project, you already know how to use Mix with Jigsaw.
 
 ---
 
@@ -19,7 +19,7 @@ Once you have Node.js and NPM installed, pull in the dependencies needed to comp
 npm install
 ```
 
-For more detailed installation instructions, check out the [full Laravel Mix documentation](https://laravel.com/docs/7.x/mix).
+For more detailed installation instructions, check out the [full Laravel Mix documentation](https://laravel.com/docs/mix).
 
 ### Organizing your assets
 
@@ -118,8 +118,6 @@ npm run watch
 ```
 
 Any time any file changes in your project, Webpack will recompile your assets, and Jigsaw will regenerate your static HTML pages to `/build_local`.
-
-Using `npm run watch` also enables [Browsersync](https://www.browsersync.io/), so your browser will automatically reload any time you make a change. It also manages serving your site locally for you, so you don't need to start your own local PHP server.
 
 You can also watch a specific environment by running `npm run local`, `npm run staging`, or `npm run prod`.
 
