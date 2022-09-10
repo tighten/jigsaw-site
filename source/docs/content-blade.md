@@ -6,7 +6,7 @@ section: documentation_content
 #### [Creating Your Site's Content](/docs/content)
 ## Blade Templates & Partials
 
-One of the biggest benefits of a templating language is the ability to create reusable layouts and partials. Jigsaw gives you access to all the templating features and control structures of Blade that are available in Laravel (learn more about Blade layouts in the [official Blade documentation](https://laravel.com/docs/7.x/blade)).
+One of the biggest benefits of a templating language is the ability to create reusable layouts and partials. Jigsaw gives you access to all the templating features and control structures of Blade that are available in Laravel (learn more about Blade layouts in the [official Blade documentation](https://laravel.com/docs/blade)).
 
 ### Defining a Layout
 
@@ -167,7 +167,7 @@ Since the `_partials` directory starts with an underscore, those files won't be 
 
 ### Extending Blade with custom directives
 
-Jigsaw gives you the ability to extend Blade with [custom directives](https://laravel.com/docs/7.x/blade#extending-blade), just as you can with Laravel. To do this, create a `blade.php` file at the root level of your Jigsaw project (at the same level as `config.php`), and return an array of directives keyed by the directive name, each returning a closure.
+Jigsaw gives you the ability to extend Blade with [custom directives](https://laravel.com/docs/blade#extending-blade), just as you can with Laravel. To do this, create a `blade.php` file at the root level of your Jigsaw project (at the same level as `config.php`), and return an array of directives keyed by the directive name, each returning a closure.
 
 For example, you can create a custom `@datetime($timestamp)` directive to format a given integer timestamp as a date in your Blade templates:
 
@@ -181,7 +181,7 @@ return [
 ];
 ```
 
-Alternatively, the `blade.php` file receives a variable named `$bladeCompiler`, which exposes an instance of `\Illuminate\View\Compilers\BladeCompiler`. With this, you can create custom Blade directives, [aliased components](https://laravel.com/docs/7.x/blade#extending-blade), named `@include` statements, or other extended Blade control structures:
+Alternatively, the `blade.php` file receives a variable named `$bladeCompiler`, which exposes an instance of `\Illuminate\View\Compilers\BladeCompiler`. With this, you can create custom Blade directives, [aliased components](https://laravel.com/docs/blade#extending-blade), named `@include` statements, or other extended Blade control structures:
 
 > _blade.php_
 

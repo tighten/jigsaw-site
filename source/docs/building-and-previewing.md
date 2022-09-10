@@ -39,6 +39,16 @@ Using the default site structure, `/build_local` will look like this:
     <div class="ellipsis">...</div>
 </div>
 
+### Watching files for changes
+
+To compile your site's assets and keep watching for changes, you can run the following command:
+
+```bash
+npm run watch
+```
+
+Now, any time a file changes in your project, webpack will recompile your assets and Jigsaw will regenerate your updated static HTML pages to `/build_local`.
+
 ### Previewing with PHP
 
 To quickly preview your site, use the `serve` command:
@@ -56,15 +66,3 @@ vendor/bin/jigsaw serve production --port=8080
 ```
 
 This will serve your `/build_production` directory at `http://localhost:8080`.
-
-### Previewing with Browsersync
-
-If you are [using Laravel Mix to compile your assets](/docs/compiling-assets) (which is included in the default Jigsaw setup), you can preview your site with Browsersync by simply running:
-
-```bash
-npm run watch
-```
-
-_(If you haven't already, you'll need to run `npm install` before running `npm run watch`.)_
-
-Browsersync will automatically open a new browser tab and reload the page every time you make a change. Very helpful for previewing your changes quickly!

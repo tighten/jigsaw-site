@@ -24,6 +24,7 @@ Both the `blog` and `docs` starter templates include samples of common page type
 - [Purgecss](https://www.purgecss.com/) to remove unused selectors from your CSS, resulting in smaller CSS files
 - Syntax highlighting using [highlight.js](https://highlightjs.org/)
 - A script that automatically generates a `sitemap.xml` file
+- [Browsersync](https://browsersync.io/) to automatically open a new browser tab and reload the page every time you make a change
 - A custom 404 page
 
 The `blog` template also includes:
