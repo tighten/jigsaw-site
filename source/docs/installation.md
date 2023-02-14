@@ -7,7 +7,7 @@ section: documentation_content
 
 ### System Requirements
 
-To use Jigsaw, you need to have PHP (minimum version 7.3) and [Composer](https://getcomposer.org/) installed on your machine. You'll also optionally need Node.js and NPM installed if you want to use [Laravel Mix](https://laravel.com/docs/mix) to compile your CSS and Javascript.
+To use Jigsaw, you need to have PHP (minimum version 8.0) and [Composer](https://getcomposer.org/) installed on your machine. You'll also optionally need Node.js and NPM installed if you want to use [Laravel Mix](https://laravel.com/docs/mix) to compile your CSS and Javascript.
 
 ---
 
