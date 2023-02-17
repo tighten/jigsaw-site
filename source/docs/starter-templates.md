@@ -36,7 +36,7 @@ The `blog` template also includes:
 ...while the `docs` template includes:
 
 - A sidebar navigation menu
-- A search bar powered by [Algolia DocSearch](https://community.algolia.com/docsearch/), and instructions on how to get started with their free indexing service
+- A search bar powered by [Algolia DocSearch](https://docsearch.algolia.com/), and instructions on how to get started with their free indexing service
 
 ---
 
