@@ -64,22 +64,23 @@ vendor/bin/jigsaw build production
 Then simply follow the steps in [Amazon's static site documentation](http://docs.aws.amazon.com/gettingstarted/latest/swh/website-hosting-intro.html) to deploy your `build_production` folder to your S3 bucket.
 
 ### Using Kinsta Application Hosting
+
 [Kinsta Application Hosting](https://kinsta.com/application-hosting/) is an affordable, developer-centric cloud host that lets you deploy and host your website.
 
-Before deploying your website, you must add minor changes to your projects.
+Before deploying your site, you must make some minor changes—install `serve` by running `npm install serve`, and then update your `package.json` file:
 
-Install `serve` by running `npm install serve` and then modify the `package.json` file a bit:
 ```json
 "scripts": {
     "build": "npm run prod && composer install && php vendor/bin/jigsaw build",
     "start": "serve ./build_production"
 },
 ```
-This will build and start the server automagically.
 
-The last thing you need to do is to add both PHP and NodeJS buildpacks in the Processes section of the dashboard.
+This will build your site and start the server automatically.
 
-You can also take a look a [the starter](https://github.com/kinsta/hello-world-jigsaw) Kinsta prepared.
+Finally, add both the PHP and NodeJS buildpacks in the Processes section of your Kinsta dashboard.
+
+Kinsta also has a Jigsaw [starter repo](https://github.com/kinsta/hello-world-jigsaw).
 
 ### Manually
 
