@@ -60,8 +60,8 @@
         <h1 class="text-grey-darker text-2xl lg:text-4xl">Jigsaw is awesome!</h1>
 
         <p class="text-grey-darker text-base">
-            Contact us at
-            <a href="mailto:hello@tighten.co?subject='Hello from Jigsaw'" class="text-blue-lighter">hello@tighten.co</a>
+            <a href="/contact" class="text-blue-lighter">Get in touch</a>
+            with the lovely humans at Tighten.
         </p>
     </div>
 </section>
