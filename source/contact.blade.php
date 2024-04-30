@@ -7,12 +7,12 @@
         <div class="container-content px-4 sm:px-6 py-4 sm:py-8">
             <div class="flex-col mb-0 sm:mb-8 pb-4">
                 <h1 class="text-4xl md:text-5xl text-blue-darker leading-none">
-                    Send us an email
+                    Get in Touch
                 </h1>
 
                 <p class="max-w-xl mt-4 text-grey-dark text-lg md:text-xl leading-normal">
-                    If you have questions or need help building something,
-                    get in touch with our experts!
+                    Have a question or a project you'd like to partner with Tighten on?
+                    Let's talk!
                 </p>
                 @include('_components.contact-form')
             </div>
