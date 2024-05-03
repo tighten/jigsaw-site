@@ -16,7 +16,7 @@ permalink: 404.html
             <h1 class="text-5xl font-bold text-blue-darker mb-6">Page not found</h1>
             <p class="text-grey-dark text-lg mb-6">The page you requested could not be found</p>
 
-            <a href="/" title="Jigsaw by Tighten" class="bg-purple-dark py-2 px-6 text-sm rounded-lg uppercase text-white shadow">Go to home</a>
+            <a href="/" title="Jigsaw by Tighten" class="bg-purple text-sm py-3 px-4 hover:bg-purple-dark rounded text-white uppercase font-medium shadow-md">Go to home</a>
         </div>
     </div>
 </div>
