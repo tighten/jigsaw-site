@@ -25,4 +25,20 @@
 
 @section('scripts')
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            const form = document.getElementById('contact-form');
+
+            if (! form.checkValidity()) {
+                form.reportValidity();
+
+                grecaptcha.reset();
+                return;
+            }
+            form.submit();
+        }
+    </script>
+    <style>
+        .grecaptcha-badge { visibility: hidden; }
+    </style>
 @endsection
