@@ -22,6 +22,7 @@
                     spellcheck="false"
                 />
             </div>
+            
             <div class="mb-6">
                 <label class="block font-semibold mb-2 text-blue-darker" for="email">Email</label>
 
