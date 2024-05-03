@@ -31,10 +31,10 @@
 
             if (! form.checkValidity()) {
                 form.reportValidity();
-
                 grecaptcha.reset();
                 return;
             }
+
             form.submit();
         }
     </script>
