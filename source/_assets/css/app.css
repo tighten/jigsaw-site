@@ -80,6 +80,11 @@ pre code.torchlight {
 pre code.torchlight .line {
     @apply px-4;
 }
+
+pre code.torchlight .line-number {
+    @apply select-none;
+}
+
 pre code.torchlight .line-number,
 pre code.torchlight .summary-caret {
     @apply mr-4;
