@@ -38,11 +38,11 @@
 
         @include('_components.sidebar')
 
-        <div class="markdown bg-white w-full lg:max-w-xl xl:max-w-180 md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow-sm md:rounded-lg" v-pre>
+        <div id="content" class="markdown bg-white w-full lg:max-w-xl xl:max-w-180 md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow-sm md:rounded-lg" v-pre>
             @yield('documentation_content')
         </div>
 
-        {{-- <navigation-on-page :headings="pageHeadings"></navigation-on-page> --}}
+        @include('_components.table-of-contents')
     </div>
 
     <footer class="flex flex-col items-center py-8">
