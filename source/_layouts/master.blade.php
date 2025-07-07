@@ -13,7 +13,9 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/fac7rzg.css">
 
-        <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css', 'assets/build') }}">
+        @viteRefresh()
+        <link rel="stylesheet" href="{{ vite('source/_assets/css/app.css') }}">
+        <script defer type="module" src="{{ vite('source/_assets/js/app.js') }}"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -1,3 +1,4 @@
+/*
 import Vue from 'vue';
 
 import NavigationOnPage from './components/navigation-on-page.vue';
@@ -26,3 +27,4 @@ new Vue({
         });
     },
 });
+*/

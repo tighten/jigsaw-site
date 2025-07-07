@@ -1,8 +1,7 @@
 const defaults = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         // Only way to not rebuild infinitely is to *not* watch './source/assets/build'
         './source/404.blade.php',
         './source/index.blade.php',
