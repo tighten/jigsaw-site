@@ -18,7 +18,7 @@
             </div>
 
             <div class="flex max-w-4xl mx-auto justify-around py-8 md:py-16">
-                <a href="/" title="Jigsaw by Tighten" class="bg-purple text-sm py-3 px-4 hover:bg-purple-dark rounded text-white uppercase font-medium shadow-md">Go to home</a>
+                <a href="/" title="Jigsaw by Tighten" class="bg-purple text-sm py-3 px-4 hover:bg-purple-dark rounded-sm text-white uppercase font-medium shadow-md">Go to home</a>
             </div>
         </div>
         @include('_components.built-with-jigsaw')

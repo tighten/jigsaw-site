@@ -2,7 +2,7 @@
     <nav class="flex justify-between items-center mb-8" aria-role="navigation">
         <div class="flex items-center">
             <img src="/assets/img/jigsaw-logo.svg" alt="Jigsaw logo"
-                class="logo-icon rounded-lg shadow border-2 border-white mr-2 sm:mr-3 w-10 sm:w-11" />
+                class="logo-icon rounded-lg shadow-sm border-2 border-white mr-2 sm:mr-3 w-10 sm:w-11" />
 
             <h1 class="uppercase tracking-wide text-blue-darker text-xl sm:text-2xl font-normal">Jigsaw</h1>
         </div>
@@ -16,7 +16,7 @@
             </a>
 
             <a href="/docs/installation" title="Read the Jigsaw documentation"
-                class="block text-sm py-2 px-4 md:py-3 md:px-4 bg-purple hover:bg-purple-dark rounded text-white uppercase font-medium shadow-md">Docs</a>
+                class="block text-sm py-2 px-4 md:py-3 md:px-4 bg-purple hover:bg-purple-dark rounded-sm text-white uppercase font-medium shadow-md">Docs</a>
         </div>
     </nav>
 </header>
