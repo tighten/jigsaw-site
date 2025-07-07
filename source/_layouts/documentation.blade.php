@@ -29,19 +29,20 @@
             </p>
         </div>
 
-        <navigation-toggle></navigation-toggle>
+        {{-- <navigation-toggle></navigation-toggle> --}}
     </nav>
 </header>
 
 <div class="bg-brown-lightest min-h-screen pt-16 md:pt-24 lg:pt-32 px-0 md:px-6">
     <div class="flex flex-col lg:flex-row justify-center max-w-300 mx-auto">
-        <navigation :links='@json($page->navigation)'></navigation>
+
+        @include('_components.sidebar')
 
         <div class="markdown bg-white w-full lg:max-w-xl xl:max-w-180 md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow-sm md:rounded-lg" v-pre>
             @yield('documentation_content')
         </div>
 
-        <navigation-on-page :headings="pageHeadings"></navigation-on-page>
+        {{-- <navigation-on-page :headings="pageHeadings"></navigation-on-page> --}}
     </div>
 
     <footer class="flex flex-col items-center py-8">
