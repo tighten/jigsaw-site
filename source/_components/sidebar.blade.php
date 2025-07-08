@@ -1,6 +1,6 @@
-<div class="w-full lg:w-64 xl:w-72 mr-0 lg:mr-8 mb-8 lg:mb-0">
+<div class="flex-1 lg:block md:border-b lg:border-b-0 pt-8 md:pt-1 pl-6 md:pl-0 pr-6 pb-2 mb-4 md:mb-6 hidden">
     <nav>
-        <ul>
+        <ul class="-mt-2">
             @foreach($page->navigation as $key => $item)
                 <li class="list-none text-sm">
                     <a
