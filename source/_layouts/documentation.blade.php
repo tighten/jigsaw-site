@@ -29,7 +29,7 @@
             </p>
         </div>
 
-        {{-- <navigation-toggle></navigation-toggle> --}}
+        @include('_components.navigation-toggle')
     </nav>
 </header>
 
