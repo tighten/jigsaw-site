@@ -10,6 +10,7 @@
         "@tailwindcss/vite": "^4.1.11",
         "@tighten/jigsaw-vite-plugin": "^1.0.1",
         "tailwindcss": "^4.1.11",
-        "vite": "^6.3.5"
+        "vite": "^6.3.5",
+        "prismjs": "^1.30.0"
     }
 }

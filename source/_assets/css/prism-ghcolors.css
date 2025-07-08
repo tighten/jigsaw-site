@@ -1,0 +1,170 @@
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #24292f;
+	font-family: 'JetBrains Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	font-size: 0.875rem;
+	line-height: 2;
+	tab-size: 4;
+	hyphens: none;
+}
+
+pre > code[class*="language-"] {
+	font-size: 1em;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	background: #0969da20;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	background: #0969da20;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border: 1px solid #d0d7de;
+	background-color: #ffffff;
+	border-radius: 6px;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .2em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background: #f6f8fa;
+	border: 1px solid #d0d7de;
+	border-radius: 3px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #6e7781;
+	font-style: italic;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.string,
+.token.attr-value {
+	color: #0a3069;
+}
+
+.token.punctuation,
+.token.operator {
+	color: #24292f;
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+	color: #0969da;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+	color: #cf222e;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+	color: #8250df;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+	color: #116329;
+}
+
+/* Blade-specific tokens */
+.token.blade-directive {
+	color: #cf222e;
+	font-weight: normal;
+}
+
+.token.blade-directive .token.directive-name {
+	color: #cf222e;
+	font-weight: normal;
+}
+
+.token.blade-directive .token.directive-params .token.punctuation {
+	color: #24292f;
+}
+
+.token.blade-directive .token.directive-params .token.php {
+	color: #24292f;
+}
+
+.token.blade-echo {
+	color: #0969da;
+}
+
+.token.blade-echo .token.punctuation {
+	color: #0969da;
+	font-weight: normal;
+}
+
+.token.blade-component .token.tag {
+	color: #116329;
+}
+
+.token.blade-component .token.namespace {
+	color: #8250df;
+}
+
+.token.blade-component .token.attr-name {
+	color: #0969da;
+}
+
+.token.blade-component .token.attr-name .token.namespace {
+	color: #cf222e;
+}
+
+.token.blade-component .token.attr-value {
+	color: #0a3069;
+}
+
+.token.blade-component .token.punctuation {
+	color: #24292f;
+}
+
+.token.php-block .token.directive {
+	color: #cf222e;
+	font-weight: normal;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}

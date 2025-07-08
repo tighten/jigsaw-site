@@ -1,5 +1,9 @@
 <?php
 
+use League\CommonMark\Extension\Table\TableExtension;
+use League\CommonMark\Extension\Attributes\AttributesExtension;
+use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
+use League\CommonMark\Extension\Strikethrough\StrikethroughExtension;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
 
 return [
@@ -16,6 +20,10 @@ return [
             ],
         ],
         'extensions' => [
+            new AttributesExtension,
+            new SmartPunctExtension,
+            new StrikethroughExtension,
+            new TableExtension,
             new HeadingPermalinkExtension(),
         ],
     ],

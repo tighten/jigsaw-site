@@ -38,7 +38,7 @@
 
         @include('_components.sidebar')
 
-        <div id="content" class="markdown bg-white w-full lg:max-w-xl xl:max-w-180 md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow-sm md:rounded-lg" v-pre>
+        <div id="content" class="line-numbers markdown bg-white w-full lg:max-w-xl xl:max-w-180 md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow-sm md:rounded-lg" v-pre>
             @yield('documentation_content')
         </div>
 

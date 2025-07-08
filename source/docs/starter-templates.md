@@ -40,17 +40,13 @@ The `blog` template also includes:
 
 ---
 
-<a class="block pt-6" href="http://jigsaw-blog-staging.tighten.co/" target="_blank">
-    ![Screenshot of Jigsaw blog starter template](/assets/img/template-blog-new.png) {.border .shadow .rounded}
-</a>
+![Screenshot of Jigsaw blog starter template](/assets/img/template-blog-new.png) {.border .shadow .rounded}
 
 <a href="http://jigsaw-blog-staging.tighten.co/" target="_blank">View a preview of the blog template</a>
 
 ---
 
-<a class="block pt-6" href="http://jigsaw-docs-staging.tighten.co/" target="_blank">
-    ![Screenshot of Jigsaw docs starter template](/assets/img/template-docs.png) {.border .shadow .rounded}
-</a>
+![Screenshot of Jigsaw docs starter template](/assets/img/template-docs.png) {.border .shadow .rounded}
 
 <a href="http://jigsaw-docs-staging.tighten.co/" target="_blank">View a preview of the docs template</a>
 
@@ -170,7 +166,7 @@ $init->output('Finishing installation...')
 
 <div class="pt-2"></div>
 
-> If you've created a starter template that you'd like to share, tell us on Twitter at [@tightenco](https://twitter.com/tightenco) or open an issue in the [Jigsaw docs repo](https://github.com/tighten/jigsaw-site/issues). Very soon, we'll be adding a showcase of well-crafted templates created by the community, and we'd love to feature yours!
+> If you've created a starter template that you'd like to share, tell us on X at [tightenco](https://twitter.com/tightenco) or open an issue in the [Jigsaw docs repo](https://github.com/tighten/jigsaw-site/issues). Very soon, we'll be adding a showcase of well-crafted templates created by the community, and we'd love to feature yours!
 
 ---
 

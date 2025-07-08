@@ -267,7 +267,7 @@
   .markdown ul > li::before {
     @apply absolute h-4 w-4 -ml-6 mt-1 bg-center bg-cover;
 
-    background-image: url('/assets/img/icon-arrow.svg');
+    background-image: url('../../assets/img/icon-arrow.svg');
     content: '';
   }
 
