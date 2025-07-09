@@ -12,5 +12,8 @@
         "tailwindcss": "^4.1.11",
         "vite": "^6.3.5",
         "prismjs": "^1.30.0"
+    },
+    "engines": {
+        "node": ">=20.0.0"
     }
 }
