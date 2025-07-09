@@ -11,10 +11,8 @@
             </h1>
         </a>
 
-        <div class="w-full flex items-center lg:max-w-xl xl:max-w-180 border-2 border-indigo-lighter rounded-sm bg-grey">
-            <img src="/assets/img/icon-search.svg" class="absolute z-10 h-4 ml-2">
-
-            <input id="docsearch" type="text" class="w-full pl-8 pr-2 py-2 bg-grey" placeholder='Search documentation (Press "/" to focus)' />
+        <div class="w-full flex items-center lg:max-w-xl xl:max-w-180">
+            <div id="docsearch" class="w-full"></div>
         </div>
 
         <div class="hidden lg:flex lg:flex-1 items-center">
@@ -62,23 +60,13 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     <script type="text/javascript">
         docsearch({
+            appId: 'BH4D9OD16A',
             apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
             indexName: 'jigsaw',
-            inputSelector: '#docsearch'
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.keyCode == 191) {
-                document.getElementById('docsearch').focus();
-                e.preventDefault()
-            }
-            if (e.keyCode == 27) {
-                document.getElementById('docsearch').blur();
-                e.preventDefault()
-            }
+            container: '#docsearch'
         });
     </script>
 @endsection
