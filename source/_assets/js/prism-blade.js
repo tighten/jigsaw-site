@@ -25,13 +25,30 @@ Prism.languages.blade = {
     pattern: /@php\b[\s\S]*?@endphp\b/,
     greedy: true,
     inside: {
-      'directive': {
-        pattern: /@(?:php|endphp)\b/,
+      'php-start': {
+        pattern: /^@php\b/,
         alias: 'keyword'
       },
-      'php': {
-        pattern: /(?<=@php\b)[\s\S]*?(?=@endphp\b)/,
-        inside: Prism.languages.php
+      'php-end': {
+        pattern: /@endphp\b$/,
+        alias: 'keyword'
+      },
+      'php-content': {
+        pattern: /[\s\S]+/,
+        inside: {
+          'php-start': {
+            pattern: /^@php\b/,
+            alias: 'keyword'
+          },
+          'php-end': {
+            pattern: /@endphp\b$/,
+            alias: 'keyword'
+          },
+          'php': {
+            pattern: /(?:(?!^@php\b|@endphp\b$)[\s\S])+/,
+            inside: Prism.languages.php
+          }
+        }
       }
     }
   },
@@ -67,15 +84,15 @@ Prism.languages.blade = {
     pattern: /@[a-zA-Z_][a-zA-Z0-9_]*\s*\([^)]*\)/,
     inside: {
       'directive-name': {
-        pattern: /^@[a-zA-Z_][a-zA-Z0-9_]*(?=\s*\()/,
+        pattern: /@[a-zA-Z_][a-zA-Z0-9_]*/,
         alias: 'keyword'
       },
       'directive-params': {
         pattern: /\s*\([^)]*\)/,
         inside: {
-          'punctuation': /^\s*\(|\)$/,
+          'punctuation': /\(|\)/,
           'php': {
-            pattern: /(?<=\s*\()[^)]*(?=\))/,
+            pattern: /[^()]+/,
             inside: Prism.languages.php
           }
         }

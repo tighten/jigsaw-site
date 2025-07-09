@@ -71,7 +71,6 @@ pre {
 .token.number,
 .token.boolean,
 .token.constant,
-.token.property,
 .token.regex,
 .token.inserted {
 	color: #0969da;
@@ -88,6 +87,7 @@ pre {
 	color: #cf222e;
 }
 
+.token.property,
 .token.builtin,
 .token.function,
 .token.deleted,
@@ -181,6 +181,11 @@ pre {
 
 .token.title,
 .token.title > * {
+	color: #005CC5;
+}
+
+.token.class-name,
+.token.package {
 	color: #005CC5;
 }
 
