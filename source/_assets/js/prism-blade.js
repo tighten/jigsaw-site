@@ -1,13 +1,10 @@
-// Prism.js language definition for Laravel Blade templating
 import Prism from 'prismjs';
 import 'prismjs/components/prism-php';
 
-// Ensure PHP language is available
 if (!Prism.languages.php) {
   console.warn('PHP language not loaded for Blade highlighting');
 }
 
-// Register Blade language
 Prism.languages.blade = {
   'comment': [
     // Blade comments {{-- ... --}}
