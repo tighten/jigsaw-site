@@ -57,7 +57,6 @@
             </a>
         </div>
 
-        <p class="text-grey-dark text-xs mt-4">Code hightlighting by <a href="https://torchlight.dev" class="font-normal text-grey-darker hover:text-purple-darker">Torchlight</a></p>
     </footer>
 </div>
 @endsection
