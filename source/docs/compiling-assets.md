@@ -93,7 +93,7 @@ Then, when Jigsaw builds your site, the entire `/source/assets` directory contai
 
 In your templates, you can reference these assets using the `mix` Blade directive. If you are using the default setup, your compiled assets will be copied to your site's `/assets/build` directory, which should be specified as the 2nd parameter of the `mix` directive:
 
-```php
+```blade
 <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 ```
 
@@ -187,4 +187,3 @@ You may choose to inline your CSS or JavaScript assets into the `<style>` or `<s
 ### Note for Sass users
 
 To prevent URLs in your `.scss` files—such as background images and fonts—from being processed and modified by Mix, make sure the `processCssUrls` option is set to `false` in your `webpack.mix.js` file.
-

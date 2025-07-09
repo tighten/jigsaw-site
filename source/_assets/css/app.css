@@ -351,3 +351,7 @@
     @apply text-blue-dark opacity-50;
   }
 }
+
+/* PrismJS styles */
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+@import '../css/prism-ghcolors.css';

@@ -1,7 +1,6 @@
 
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #24292f;
+code,
+pre {
 	font-family: 'JetBrains Mono', monospace;
 	direction: ltr;
 	text-align: left;
@@ -14,22 +13,18 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-pre > code[class*="language-"] {
-	font-size: 1em;
-}
-
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+pre::-moz-selection, pre ::-moz-selection,
+code::-moz-selection, code ::-moz-selection {
 	background: #0969da20;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre::selection, pre ::selection,
+code::selection, code ::selection {
 	background: #0969da20;
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
@@ -39,13 +34,10 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .2em;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	background: #f6f8fa;
-	border: 1px solid #d0d7de;
-	border-radius: 3px;
+:not(pre) > code {
+	padding: .125rem .375rem;
+	background: #f3f7f9;
+	border-radius: .25rem;
 }
 
 .token.comment,
@@ -65,9 +57,12 @@ pre[class*="language-"] {
 	color: #0a3069;
 }
 
-.token.punctuation,
-.token.operator {
+.token.punctuation {
 	color: #24292f;
+}
+
+.token.operator {
+	color: #D73A49;
 }
 
 .token.entity,
@@ -75,12 +70,15 @@ pre[class*="language-"] {
 .token.symbol,
 .token.number,
 .token.boolean,
-.token.variable,
 .token.constant,
 .token.property,
 .token.regex,
 .token.inserted {
 	color: #0969da;
+}
+
+.token.variable {
+	color: #24292E;
 }
 
 .token.atrule,
@@ -90,6 +88,7 @@ pre[class*="language-"] {
 	color: #cf222e;
 }
 
+.token.builtin,
 .token.function,
 .token.deleted,
 .language-autohotkey .token.tag {
@@ -99,12 +98,12 @@ pre[class*="language-"] {
 .token.tag,
 .token.selector,
 .language-autohotkey .token.keyword {
-	color: #116329;
+	color: #22863A;
 }
 
 /* Blade-specific tokens */
 .token.blade-directive {
-	color: #cf222e;
+	color: #D73A49;
 	font-weight: normal;
 }
 
@@ -159,12 +158,43 @@ pre[class*="language-"] {
 	font-weight: normal;
 }
 
-.token.important,
 .token.function,
+.token.important {
+	font-weight: normal;
+}
+
 .token.bold {
 	font-weight: bold;
 }
 
 .token.italic {
 	font-style: italic;
+}
+
+.token.special-attr {
+	color: #6F42C1;
+}
+
+.token.front-matter {
+	color: #22863A;
+}
+
+.token.title,
+.token.title > * {
+	color: #005CC5;
+}
+
+.line-numbers .line-numbers-rows {
+    color: #babbbd;
+    top: -5px;
+    border-right: 0;
+	left: -3.4em;
+}
+
+.line-numbers-rows > span::before {
+	color: #babbbd;
+}
+
+pre[class*="language-"].line-numbers {
+	padding-left: 3.5em;
 }
