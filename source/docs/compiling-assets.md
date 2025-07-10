@@ -93,7 +93,7 @@ Then, when Jigsaw builds your site, the entire `/source/assets` directory contai
 
 In your templates, you can reference these assets using the `mix` Blade directive. If you are using the default setup, your compiled assets will be copied to your site's `/assets/build` directory, which should be specified as the 2nd parameter of the `mix` directive:
 
-```blade
+```php
 <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 ```
 
