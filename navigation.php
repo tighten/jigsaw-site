@@ -5,13 +5,12 @@ return [
         'root' => '/docs/installation',
         'children' => [
             'Using a Starter Template' => ['root' => '/docs/starter-templates'],
+            'Upgrading from version 1.7' => ['root' => '/docs/upgrade-guide'],
         ],
     ],
-    'Building & Previewing' => [
-        'root' => '/docs/building-and-previewing',
-        'children' => [
-            'Environments' => ['root' => '/docs/building-and-previewing-environments'],
-        ],
+    'Local Development'  => ['root' => '/docs/local-development'],
+    'Generating Your Site'  => [
+        'root' => '/docs/generating-your-site',
     ],
     'Compiling Assets' => ['root' => '/docs/compiling-assets'],
     'Creating your Site\'s Content' => [

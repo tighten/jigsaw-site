@@ -16,7 +16,7 @@ The approach we use at Tighten for deploying Jigsaw sites to GitHub pages looks 
 1. Build your site for production
 
 ```bash
-npm run prod
+npm run build
 ```
 
 2. Commit the `build_production` folder to your repository
@@ -39,7 +39,7 @@ To deploy a site to Netlify, first create a `netlify.toml` file with the followi
 
 ```toml
 [build]
-command = "npm run prod"
+command = "npm run build"
 publish = "build_production"
 ```
 
@@ -58,7 +58,7 @@ What you might not have known is that Amazon S3 also has first class support for
 To deploy a site to S3, first build your site for production:
 
 ```bash
-vendor/bin/jigsaw build production
+npm run build
 ```
 
 Then simply follow the steps in [Amazon's static site documentation](http://docs.aws.amazon.com/gettingstarted/latest/swh/website-hosting-intro.html) to deploy your `build_production` folder to your S3 bucket.
@@ -71,7 +71,7 @@ Before deploying your site, you must make some minor changes—install `serve` b
 
 ```json
 "scripts": {
-    "build": "npm run prod && composer install && php vendor/bin/jigsaw build",
+    "build": "composer install && npm run build",
     "start": "serve ./build_production"
 },
 ```
@@ -79,8 +79,6 @@ Before deploying your site, you must make some minor changes—install `serve` b
 This will build your site and start the server automatically.
 
 Finally, add both the PHP and NodeJS buildpacks in the Processes section of your Kinsta dashboard.
-
-Kinsta also has a Jigsaw [starter repo](https://github.com/kinsta/hello-world-jigsaw).
 
 ### Manually
 
@@ -98,7 +96,7 @@ Jigsaw will look for your source files in a `source` directory, and will output 
 return [
     'build' => [
         'source' => 'src',
-        'destination' => 'my_desination',
+        'destination' => 'my_destination',
     ],
     // ...
 ];
@@ -128,12 +126,14 @@ To include the environment name in your destination path, use the `{env}` token 
 
 return [
     'build' => [
-        'destination' => '../../{env}/public',
+        'destination' => 'dist/{env}/public',
     ],
     // ...
 ];
 ```
 
-In this example, running `./vendor/bin/jigsaw build staging` would output your built files to staging/public, two levels up from your project root. Jigsaw will create any directories that do not already exist.
+In this example, running `NODE_ENV=staging npm run build` would output your built files to `dist/staging/public`. Jigsaw will create any directories that do not already exist.
 
-You can also assign different source and build paths for different environments by using multiple [environment-specific `config.php` files](/docs/environments/). Source and destination paths in `config.production.php`, for example, will get merged with any build paths that have been defined in `config.php` when running `./vendor/bin/jigsaw build production`.
+You can also assign different source and build paths for different environments by using multiple [environment-specific config files](/docs/generating-your-site#environments).
+
+Source and destination paths in `config.production.php`, for example, will get merged with any build paths that have been defined in `config.php` when running `npm run build`.
