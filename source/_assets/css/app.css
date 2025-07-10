@@ -305,4 +305,4 @@
 
 /* PrismJS styles */
 @import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
-@import '../css/prism-ghcolors.css';
+@import './prism-ghcolors.css';

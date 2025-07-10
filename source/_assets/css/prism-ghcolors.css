@@ -188,6 +188,14 @@ pre {
     color: #005CC5;
 }
 
+.token.inserted {
+    color: green;
+}
+
+.token.deleted {
+    color: red;
+}
+
 .line-numbers .line-numbers-rows {
     color: #babbbd;
     top: -5px;

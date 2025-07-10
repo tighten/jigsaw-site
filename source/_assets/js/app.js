@@ -8,6 +8,7 @@ import 'prismjs/components/prism-markdown';
 import 'prismjs/components/prism-yaml';
 import 'prismjs/components/prism-nginx';
 import 'prismjs/components/prism-toml';
+import 'prismjs/components/prism-diff';
 import 'prismjs/plugins/line-numbers/prism-line-numbers';
 import './prism-blade.js';
 
