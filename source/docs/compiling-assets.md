@@ -3,27 +3,159 @@ extends: _layouts.documentation
 section: documentation_content
 ---
 
-## Compiling Assets with Laravel Mix
+## Compiling Assets
 
-Jigsaw sites are configured with support for [Laravel Mix](https://laravel.com/docs/mix) out of the box. If you've ever used Mix in a Laravel project, you already know how to use Mix with Jigsaw.
-
----
+Jigsaw sites are configured with support for [Vite](https://vite.dev/) out of the box. If you've ever used Vite in a Laravel project, you already know how to use Vite with Jigsaw.
 
 ### Setup
 
-To get started, first make sure you have Node.js and NPM installed in your environment.
-
-Once you have Node.js and NPM installed, pull in the dependencies needed to compile your assets:
+To get started, first make sure you have Node.js and NPM installed. Then, pull in the dependencies needed to compile your assets:
 
 ```bash
 npm install
 ```
 
-For more detailed installation instructions, check out the [full Laravel Mix documentation](https://laravel.com/docs/mix).
+For more detailed installation instructions, check out the [full Laravel Vite documentation](https://laravel.com/docs/vite).
 
-### Organizing your assets
+### Vite config
 
-By default, any assets you want to process with Mix should live in `/source/_assets`:
+On the root of your project, you'll find Vite's config file with Jigsaw's plugin configured:
+
+- `input` sets two entry points, `main.js` for JavaScript and `main.css` for CSS.
+- `refresh` indicates wether or not to listen for changes.
+
+```js
+import jigsaw from '@tighten/jigsaw-vite-plugin';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+    plugins: [
+        jigsaw({
+            input: [
+                'source/_assets/js/main.js',
+                'source/_assets/css/main.css'
+            ],
+            refresh: true,
+        }),
+    ],
+});
+```
+
+### Referencing Assets
+
+In your main layout file, your assets are referenced using the **`vite` method**. The **`@viteRefresh()` directive** is needed for enabling automatic page refreshes when you make changes during local development.
+
+```blade
+@viteRefresh()
+<link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
+<script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
+```
+
+### Importing Modules
+
+From these entry points, you can easily import additional modules. Vite handles serving these modules when you preview your site with `npm run dev`, and it efficiently bundles them when you prepare for production with `npm run build`.
+
+In JavaScript, you can import libraries and other local files:
+
+```js
+import { get } from 'lodash';
+import helpers from './helpers';
+```
+
+Similarly, in CSS, you can import other style files, whether they're from packages or local to your project:
+
+```css
+@import 'prismjs/themes/prism.css';
+@import './more-styles.css';
+```
+
+### Tailwind 3
+
+To use **Tailwind CSS v3**, make sure to install it along with its necessary dependencies:
+
+```sh
+npm install -D tailwindcss@3 postcss autoprefixer
+```
+
+Next, create a file named `postcss.config.js` in your project's root directory and add these contents:
+
+```js
+export default {
+  plugins: {
+    "postcss-import": {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+Finally, ensure your main CSS file includes the following `@import` rules:
+
+```css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```
+
+### Tailwind 4
+
+If you're opting for **Tailwind CSS v4**, install it along with its dedicated Vite plugin:
+
+```sh
+npm install -D tailwindcss@^4 @tailwindcss/vite
+```
+
+Then, you'll need to update your Vite configuration to enable the Tailwind plugin:
+
+```js
+import jigsaw from '@tighten/jigsaw-vite-plugin';
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+    plugins: [
+        jigsaw({
+            input: [
+                'source/_assets/js/main.js',
+                'source/_assets/css/main.css'
+            ],
+            refresh: true,
+        }),
+        tailwindcss()
+    ],
+});
+```
+
+And make sure your main CSS file includes this single `@import` statement:
+
+```css
+@import 'tailwindcss';
+```
+
+### Sass and Less
+
+Vite offers built-in support for pre-processor files like `.scss`, `.sass`, `.less`, `.styl`, and `.stylus`. You don't need to install any Vite-specific plugins for them. However, you need to install the corresponding pre-processor package itself:
+
+```sh
+# For .scss and .sass files
+npm add -D sass-embedded # or sass
+
+# For .less files
+npm add -D less
+
+# For .styl and .stylus files
+npm add -D stylus
+```
+
+Once installed, you can then import these types of files directly into your main CSS file (e.g., `main.css`):
+
+```css
+@import './my-styles.sass';
+```
+
+### Changing asset locations
+
+We recommend to keep these entry points in `/source/_assets`. The default structure looks like this:
 
 <div class="files">
     <div class="folder folder--open">source
@@ -39,151 +171,31 @@ By default, any assets you want to process with Mix should live in `/source/_ass
             <div class="file">master.blade.php</div>
         </div>
         <div class="folder folder--open">assets
-            <div class="folder">build</div>
             <div class="folder folder--open">images
                 <div class="file">jigsaw.png</div>
             </div>
         </div>
         <div class="file">index.blade.php</div>
     </div>
-    <div class="folder">tasks</div>
     <div class="folder">vendor</div>
     <div class="ellipsis">...</div>
 </div>
 
-Mix looks for each asset type _(like CSS, JS, Sass, Less, etc.)_ in a subdirectory named after that asset type. We recommend following this convention to avoid additional configuration.
-
-By default, once Webpack compiles your assets, they will be placed in their corresponding subdirectories in `/source/assets/build`:
-
-<div class="files">
-    <div class="folder folder--open">source
-        <div class="folder folder--open">_assets
-            <div class="folder folder--open">js
-                <div class="file">main.js</div>
-            </div>
-            <div class="folder folder--open">css
-                <div class="file">main.css</div>
-            </div>
-        </div>
-        <div class="folder folder--open">_layouts
-            <div class="file">master.blade.php</div>
-        </div>
-        <div class="folder folder--open focus">assets
-            <div class="folder folder--open">build
-                <div class="folder folder--open">css
-                    <div class="file">main.css</div>
-                </div>
-                <div class="folder folder--open">js
-                    <div class="file">main.js</div>
-                </div>
-                <div class="file">mix-manifest.json</div>
-            </div>
-            <div class="folder folder--open">images
-                <div class="file">jigsaw.png</div>
-            </div>
-        </div>
-        <div class="file">index.blade.php</div>
-    </div>
-    <div class="folder">tasks</div>
-    <div class="folder">vendor</div>
-    <div class="ellipsis">...</div>
-</div>
-
-Then, when Jigsaw builds your site, the entire `/source/assets` directory containing your `build` files (and any other directories containing static assets, such as `images` or `fonts`, that you choose to store there) will be copied to `/build_local` or `/build_production`.
-
-In your templates, you can reference these assets using the `mix` Blade directive. If you are using the default setup, your compiled assets will be copied to your site's `/assets/build` directory, which should be specified as the 2nd parameter of the `mix` directive:
-
-```php
-<link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
-```
-
-### Compiling your assets
-
-To compile your assets, run:
-
-```bash
-npm run dev
-```
-
-First, Webpack will compile your assets and store them in the `/source/assets/build` directory. Then, Jigsaw's `build` command will be run automatically to build your site (including your compiled assets) to `/build_local`. You can then preview your changes in the browser.
-
-### Watching for changes
-
-Manually running `npm run dev` every time you make a change gets old pretty fast.
-
-Instead, you can run the following command to watch your project for changes:
-
-```bash
-npm run watch
-```
-
-Any time any file changes in your project, Webpack will recompile your assets, and Jigsaw will regenerate your static HTML pages to `/build_local`.
-
----
-
-### Changing asset locations
-
-If you'd like to change the source directory for your assets, edit the following line in `webpack.mix.js`:
-
-```js
-mix.setPublicPath('source/assets/build');
-```
-
-If you'd like to change the destination directory for your assets, edit the second parameter of each compile step of `webpack.mix.js`:
-
-```js
-mix.jigsaw()
-    .js('source/_assets/js/main.js', 'scripts')
-    .postCss('source/_assets/css/main.css', 'styles')
-    // ...
-```
-
----
-
-### Enabling different preprocessors
-
-Jigsaw ships with the following `webpack.mix.js` and is configured to use Tailwind CSS and PostCSS out of the box:
-
-```js
-const mix = require('laravel-mix');
-require('laravel-mix-jigsaw');
-
-mix.disableSuccessNotifications();
-mix.setPublicPath('source/assets/build');
-
-mix.jigsaw()
-    .js('source/_assets/js/main.js', 'js')
-    .postCss('source/_assets/css/main.css', 'css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-    ])
-    .options({
-        processCssUrls: false,
-    })
-    .version();
-```
-
-If you'd like to switch to Sass, Less, Coffeescript, or take advantage of any other Mix features, feel free to edit this file to your heart's content. Here's an example of what it might look like to use Less and React:
-
-```js
-mix.jigsaw()
-    .react('source/_assets/js/main.js', 'js')
-    .less('source/_assets/less/main.less', 'css')
-    .version();
-```
-
----
-
-### Inlining your assets
-
-You may choose to inline your CSS or JavaScript assets into the `<style>` or `<script>` tags in your page `<head>`, to save a network request and to avoid blocking the rest of the page from loading. The `inline` helper function will accomplish this:
+However, you're free to store your assets elsewhere and update your Vite configuration and layout accordingly. For instance, if you choose to store them in a directory named `foobar` at the root of your project, you'd update your Blade layout like this:
 
 ```blade
-{{ inline(mix('css/main.css', 'assets/build')) }}
+@viteRefresh()
+<link rel="stylesheet" href="{{ vite('foobar/css/main.css') }}">
+<script defer type="module" src="{{ vite('foobar/js/main.js') }}"></script>
 ```
 
----
+And your `jigsaw` configuration in `vite.config.js` would look like this:
 
-### Note for Sass users
+```js
+jigsaw({
+    input: ['foobar/js/main.js', 'foobar/css/main.css'],
+    refresh: true,
+}),
+```
 
-To prevent URLs in your `.scss` files—such as background images and fonts—from being processed and modified by Mix, make sure the `processCssUrls` option is set to `false` in your `webpack.mix.js` file.
+Keep in mind that if you place this directory under `source`, its name **must** start with an underscore (e.g., `_foobar`) to prevent Jigsaw from directly copying its contents to the build output.
