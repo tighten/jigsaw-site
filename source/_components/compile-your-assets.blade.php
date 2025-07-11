@@ -6,8 +6,7 @@
     </p>
 
     <div class="flex items-center justify-center border border-indigo-lighter bg-white rounded-lg divide-x divide-indigo-lighter">
-        <div class="px-8 py-4"><img class="size-16" src="/assets/img/tailwind-logo.svg" alt="Tailwind logo"></div>
-        <div class="px-8 py-4"><img class="size-16" src="/assets/img/less-logo.svg" alt="Less logo"></div>
-        <div class="px-8 py-4"><img class="size-16" src="/assets/img/sass-logo.svg" alt="Sass logo"></div>
+        <div class="px-8 py-4"><img class="size-16" src="/assets/img/logo-vite.svg" alt="Vite logo"></div>
+        <div class="px-8 py-4"><img class="size-16" src="/assets/img/logo-tailwind.svg" alt="Tailwind logo"></div>
     </div>
 </section>
