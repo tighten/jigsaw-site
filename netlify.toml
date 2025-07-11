@@ -1,8 +1,0 @@
-[build]
-command = "npm run prod"
-publish = "build_production"
-[[redirects]]
-from = "https://jigsaw.tighten.co/*"
-to = "https://jigsaw.tighten.com/:splat"
-status = 301
-force = true
