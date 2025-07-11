@@ -2,7 +2,7 @@
 
 @section('body')
 <header class="w-full bg-white absolute z-10 shadow-md px-4 md:px-6">
-    <nav class="flex items-center max-w-300 mx-auto py-4" aria-role="navigation">
+    <nav class="flex items-center max-w-[75rem] mx-auto py-4" role="navigation">
         <a class="flex shrink-0 lg:flex-1 items-center mr-1" href="/" title="Jigsaw by Tighten">
             <img src="/assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="w-10 lg:w-11 mr-3 shadow-sm border-2 border-white rounded-lg" />
 
