@@ -63,8 +63,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     <script type="text/javascript">
         docsearch({
-            appId: 'BH4D9OD16A',
-            apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
+            appId: 'XG92QA98OI',
+            apiKey: '70d3b0f1748d9554138bd421caa2b383',
             indexName: 'jigsaw',
             container: '#docsearch'
         });
