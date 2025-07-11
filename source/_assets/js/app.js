@@ -1,28 +1,17 @@
-import Vue from 'vue';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-markup-templating';
+import 'prismjs/components/prism-php';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-markdown';
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-nginx';
+import 'prismjs/components/prism-toml';
+import 'prismjs/components/prism-diff';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
+import './prism-blade.js';
 
-import NavigationOnPage from './components/navigation-on-page.vue';
-import NavigationToggle from './components/navigation-toggle.vue';
-import Navigation from './components/navigation.vue';
-
-new Vue({
-    el: '#vue-app',
-
-    components: {
-        Navigation,
-        NavigationOnPage,
-        NavigationToggle
-    },
-
-    data() {
-        return {
-            pageHeadings : []
-        }
-    },
-
-    mounted() {
-        document.querySelectorAll('h3').forEach((heading) => {
-            heading.id = heading.textContent.replace(/\s+/g, '-').toLowerCase();
-            this.pageHeadings.push(heading);
-        });
-    },
+document.addEventListener('DOMContentLoaded', () => {
+    Prism.highlightAll();
 });

@@ -4,8 +4,8 @@
 
         <p class="text-pink-lighter text-lg mb-10">Just make a new project directory and install Jigsaw using Composer</p>
 
-        <code class="bg-purple-darker w-auto py-3 px-4 sm:px-12 mb-2 rounded-lg">
-            <pre class="!my-0 text-white text-xs sm:text-sm md:text-lg text-center !border-none !overflow-visible"><span class="select-none">$ </span>composer require tightenco/jigsaw</pre>
-        </code>
+        <div class="bg-purple-darker w-auto py-3 px-4 sm:px-12 mb-2 rounded-lg">
+            <div class="my-0! text-white font-mono text-xs sm:text-sm md:text-lg text-center border-none! overflow-visible!"><span class="select-none">$ </span>composer require tightenco/jigsaw</div>
+        </div>
     </div>
 </section>

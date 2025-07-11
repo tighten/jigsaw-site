@@ -13,7 +13,7 @@ You can control the order in which your collection items are sorted. When iterat
 
 By default, collection items will be sorted by their filenames in ascending order. This can be a handy way to order items by date, for instance, by prepending the date to each filename:
 
-```
+```text
 2017-01-01-my-first-post.md
 2017-02-14-my-second-post.md
 2017-03-15-my-third-post.md

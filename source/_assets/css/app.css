@@ -1,109 +1,147 @@
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss';
 
-/* Layout */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 
-.bg-gradient-purple {
-    background: #884992;
-    background: linear-gradient(to right, #703e84, #884992);
+  --color-grey-darker: #596a73;
+  --color-grey-dark: #70818a;
+  --color-grey: #f2f5f8;
+  --color-grey-light: #dae4e9;
+  --color-grey-lighter: #f3f7f9;
+  --color-grey-lightest: #fafcfc;
+  --color-brown-lightest: #f7f6f5;
+  --color-yellow: #ffed4a;
+  --color-teal-light: #aef2fd;
+  --color-blue-darkest: #0a2440;
+  --color-blue-darker: #0f2f53;
+  --color-blue-dark: #45658a;
+  --color-blue: #3c6492;
+  --color-blue-lighter: #2d81df;
+  --color-indigo-darker: #3e6389;
+  --color-indigo-dark: #143154;
+  --color-indigo-lighter: #e1e6ea;
+  --color-purple-darker: #562b61;
+  --color-purple-dark: #773580;
+  --color-purple: #96539f;
+  --color-purple-light: #a779e9;
+  --color-purple-lighter: #cbabf8;
+  --color-pink-dark: #eb5286;
+  --color-pink: #ee6e99;
+  --color-pink-lighter: #ffd8d8;
+
+  --font-sans:
+    proxima-nova, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
 }
 
-.container-content {
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #dae4e9;
+  }
+}
+
+@layer components {
+  /* Layout */
+
+  .bg-gradient-purple {
+    background: #884992;
+    background: linear-gradient(to right, #703e84, #884992);
+  }
+
+  .container-content {
     @apply px-4 mx-auto;
 
     max-width: 75rem;
-}
+  }
 
-/* Typography */
+  /* Typography */
 
-html {
+  html {
     font-size: 17px;
-}
+  }
 
-a {
+  a {
     @apply font-semibold no-underline;
-}
+  }
 
-h1 {
+  h1 {
     @apply text-3xl font-semibold;
-}
+  }
 
-h2 {
+  h2 {
     @apply text-2xl font-semibold;
-}
+  }
 
-h3 {
+  h3 {
     @apply text-xl;
-}
+  }
 
-h4 {
+  h4 {
     @apply text-lg;
-}
+  }
 
-h3,
-h4,
-h5,
-h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-normal;
-}
+  }
 
-p {
+  p {
     @apply mb-5 text-base font-normal leading-normal text-blue-dark;
-}
+  }
 
-@screen md {
+  @media (width >= theme(--breakpoint-md)) {
     h1 {
-        @apply text-4xl;
+      @apply text-4xl;
     }
 
     h2 {
-        @apply text-3xl;
+      @apply text-3xl;
     }
 
     h3 {
-        @apply text-2xl;
+      @apply text-2xl;
     }
 
     h4 {
-        @apply text-xl;
+      @apply text-xl;
     }
-}
+  }
 
-/* Code snippets & Torchlight */
+  /* File tree graphics */
 
-pre {
-    @apply my-4 leading-loose border border-grey-light rounded-md overflow-x-auto;
-}
-pre code.torchlight {
-    @apply inline-block py-4 text-sm rounded-md;
-}
-pre code.torchlight .line {
-    @apply px-4;
-}
+  .files {
+    @apply px-8 py-4 mt-6 mb-10 mx-auto text-sm bg-white border border-indigo-lighter rounded-sm;
+  }
 
-pre code.torchlight .line-number {
-    @apply select-none;
-}
-
-pre code.torchlight .line-number,
-pre code.torchlight .summary-caret {
-    @apply mr-4;
-}
-
-/* File tree graphics */
-
-.files {
-    @apply px-8 py-4 mt-6 mb-10 mx-auto text-sm bg-white border border-indigo-lighter rounded;
-}
-
-.files .ellipsis {
+  .files .ellipsis {
     @apply p-2 leading-none tracking-wide text-blue-dark;
-}
+  }
 
-.files .file {
+  .files .file {
     @apply px-6 pt-2 text-blue-darker;
-}
-.files .file::before {
+  }
+  .files .file::before {
     @apply absolute block fill-current text-blue-dark;
 
     background-size: 40px 18px;
@@ -111,21 +149,21 @@ pre code.torchlight .summary-caret {
     height: 18px;
     margin-left: -46px;
     width: 40px;
-}
-.files .file.focus {
-    @apply py-4 bg-grey-lighter rounded;
+  }
+  .files .file.focus {
+    @apply py-4 bg-grey-lighter rounded-sm;
 
     margin-left: -15px;
     margin-top: 8px;
     padding-left: 53px;
-}
+  }
 
-.files .folder {
+  .files .folder {
     @apply text-purple;
 
     padding: 8px 0 0 28px;
-}
-.files .folder::before {
+  }
+  .files .folder::before {
     @apply absolute block;
 
     background-size: 40px 18px;
@@ -133,8 +171,8 @@ pre code.torchlight .summary-caret {
     height: 18px;
     margin-left: -46px;
     width: 40px;
-}
-.files .folder--open::before {
+  }
+  .files .folder--open::before {
     @apply absolute block;
 
     background-size: 40px 18px;
@@ -142,146 +180,129 @@ pre code.torchlight .summary-caret {
     height: 18px;
     margin-left: -46px;
     width: 40px;
-}
-.files .folder.focus {
-    @apply py-3 bg-grey-lighter rounded;
+  }
+  .files .folder.focus {
+    @apply py-3 bg-grey-lighter rounded-sm;
 
     margin-left: -25px;
     margin-right: -25px;
     margin-top: 8px;
     padding-left: 53px;
-}
+  }
 
-/* Markdown */
+  /* Markdown */
 
-.markdown a {
+  .markdown a {
     @apply text-purple-dark no-underline;
-}
-.markdown a:hover {
+  }
+  .markdown a:hover {
     @apply text-purple-darker underline;
-}
+  }
 
-.markdown blockquote {
+  .markdown blockquote {
     @apply px-6 py-2 my-4 text-grey border-l-4 border-grey-light;
-}
-.markdown blockquote > p {
+  }
+  .markdown blockquote > p {
     @apply m-0;
-}
+  }
 
-.markdown h1,
-.markdown h2,
-.markdown h3 {
+  .markdown h1,
+  .markdown h2,
+  .markdown h3 {
     @apply mt-10 mb-4 text-blue-darker;
-}
-.markdown h1:first-child,
-.markdown h2:first-child,
-.markdown h3:first-child {
+  }
+  .markdown h1:first-child,
+  .markdown h2:first-child,
+  .markdown h3:first-child {
     @apply mt-6;
-}
+  }
 
-.markdown h4 {
+  .markdown h4 {
     @apply mt-6 mb-2 text-blue-darker;
-}
+  }
 
-.markdown hr {
+  .markdown hr {
     @apply mt-10 mb-4 border border-grey-light;
-}
+  }
 
-.markdown img {
+  .markdown img {
     @apply max-w-full;
-}
+  }
 
-.markdown ul {
+  .markdown ul {
     @apply pl-2 my-4 list-none;
-}
-.markdown ul > li {
+  }
+  .markdown ul > li {
     @apply pl-5 pb-1 ml-4 mb-2 leading-normal text-blue-dark;
-}
-.markdown ul > li::before {
+  }
+  .markdown ul > li::before {
     @apply absolute h-4 w-4 -ml-6 mt-1 bg-center bg-cover;
 
     background-image: url('/assets/img/icon-arrow.svg');
     content: '';
-}
+  }
 
-.markdown ol {
+  .markdown ol {
     @apply pl-2 my-4 list-decimal;
-}
-.markdown ol > li {
+  }
+  .markdown ol > li {
     @apply pl-2 pb-1 ml-4 mb-2 leading-normal text-blue-dark;
-}
+  }
 
-.markdown li {
+  .markdown li {
     @apply mb-3;
-}
-.markdown li > ul {
+  }
+  .markdown li > ul {
     @apply pl-4;
-}
+  }
 
-.markdown p {
+  .markdown p {
     @apply my-5 text-base leading-normal text-blue-dark;
-}
+  }
 
-.markdown p code,
-.markdown li code {
-    @apply inline px-1.5 py-0.5 text-sm text-blue-dark bg-grey-lighter rounded;
-}
+  .markdown p code,
+  .markdown li code {
+    @apply inline px-1.5 py-0.5 text-sm text-blue-dark bg-grey-lighter rounded-sm;
+  }
 
-.markdown pre + blockquote {
+  .markdown pre + blockquote {
     @apply mt-6;
-}
+  }
 
-/* Code editor graphics */
+  /* Code editor graphics */
 
-.editor-row {
+  .editor-row {
     @apply flex items-center mb-2;
-}
-@screen md {
+  }
+  @media (width >= theme(--breakpoint-md)) {
     .editor-row {
-        @apply mb-4;
+      @apply mb-4;
     }
-}
+  }
 
-.line-code {
+  .line-code {
     @apply text-xs leading-normal font-mono font-light text-white;
-}
+  }
 
-.ln {
+  .ln {
     @apply hidden w-4 mr-6 mb-0 text-xs font-mono font-light text-grey-lightest select-none;
-}
-@screen lg {
+  }
+  @media (width >= theme(--breakpoint-lg)) {
     .ln {
-        @apply block;
+      @apply block;
     }
+  }
 }
 
 /* Docsearch */
 
-.algolia-autocomplete {
-    @apply w-full;
-}
-.algolia-autocomplete .ds-dropdown-menu {
-    @apply w-full;
-
-    min-width: auto !important;
-}
-.algolia-autocomplete .algolia-docsearch-suggestion--wrapper {
-    @apply border-b;
-
-    padding: 16px 0 !important;
+#docsearch {
+  .DocSearch-Button {
+    width: 100%;
+    margin: 0;
+  }
 }
 
-@media (max-width: 768px) {
-    .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-        display: none !important;
-    }
-}
-
-.ds-input {
-    @apply w-full p-2 rounded text-blue-dark outline-none;
-}
-.ds-input::placeholder {
-    @apply text-blue-dark opacity-50;
-}
-
-@tailwind utilities;
+/* PrismJS styles */
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+@import './prism-ghcolors.css';

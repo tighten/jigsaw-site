@@ -1,22 +1,19 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "mix",
-        "watch": "mix watch",
-        "prod": "mix --production"
+        "dev": "vite",
+        "build": "vite build",
+        "prod": "vite build --mode production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.3.3",
-        "axios": "^0.21.2",
-        "browser-sync": "^2.29.1",
-        "browser-sync-webpack-plugin": "^2.3.0",
-        "laravel-mix": "^6.0.49",
-        "laravel-mix-jigsaw": "^2.0.0",
-        "postcss": "^8.3.6",
-        "tailwindcss": "^2.2.9",
-        "vue": "^2.5.21",
-        "vue-loader": "^15.9.8",
-        "vue-template-compiler": "^2.5.21",
-        "webpack": "^5.76.0"
+        "@tailwindcss/vite": "^4.1.11",
+        "@tighten/jigsaw-vite-plugin": "^1.0.1",
+        "tailwindcss": "^4.1.11",
+        "vite": "^6.3.5",
+        "prismjs": "^1.30.0"
+    },
+    "engines": {
+        "node": ">=20.0.0"
     }
 }

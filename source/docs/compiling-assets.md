@@ -187,4 +187,3 @@ You may choose to inline your CSS or JavaScript assets into the `<style>` or `<s
 ### Note for Sass users
 
 To prevent URLs in your `.scss` files—such as background images and fonts—from being processed and modified by Mix, make sure the `processCssUrls` option is set to `false` in your `webpack.mix.js` file.
-

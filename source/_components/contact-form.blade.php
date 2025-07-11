@@ -13,7 +13,7 @@
                     id="name"
                     name="name"
                     type="text"
-                    class="bg-white border border-blue-darker p-2 rounded w-full"
+                    class="bg-white border border-blue-darker p-2 rounded-sm w-full"
                     required
                     autofocus
                     autocomplete="name"
@@ -30,7 +30,7 @@
                     id="email"
                     name="email"
                     type="email"
-                    class="bg-white border border border-blue-darker p-2 rounded w-full"
+                    class="bg-white border border border-blue-darker p-2 rounded-sm w-full"
                     required
                     autocomplete="email"
                     autocorrect="off"
@@ -44,7 +44,7 @@
             <label class="block font-semibold mb-2 text-blue-darker" for="message">Message</label>
 
             <textarea
-                class="bg-white border border-blue-darker p-2 rounded w-full"
+                class="bg-white border border-blue-darker p-2 rounded-sm w-full"
                 id="message"
                 name="message"
                 rows="6"
@@ -62,7 +62,7 @@
 
             <div class="w-full">
                 <button
-                    class="g-recaptcha flex float-right text-sm py-3 px-4 bg-blue-darker hover:bg-blue-dark rounded text-white uppercase font-medium shadow-md"
+                    class="g-recaptcha flex float-right text-sm py-3 px-4 bg-blue-darker hover:bg-blue-dark rounded-sm text-white uppercase font-medium shadow-md"
                     type="submit"
                     data-sitekey="6LfDrMwpAAAAAIAGKqYK-Z94c0h_gM4OKjVFbPmK"
                     data-callback="onSubmit"
