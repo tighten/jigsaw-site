@@ -42,7 +42,9 @@ section: content
 ### Sorry, that page does not exist.
 ```
 
-When hosting your site on an Nginx server, you will need to configure the `error_page` setting in your server's `nginx.conf` file, or in the specific configuration file that Nginx is using for your site. These configuration files are typically found in `/etc/nginx/`, though their location varies by server. If your site is managed using Laravel Forge, for example, the configuration file for your site will be located at `/etc/nginx/sites-enabled/{name-of-your-site}`; it can also be edited via Forge's "Edit Nginx Configuration" option in the "Files" menu.
+When hosting your site on an Nginx server, you will need to configure the `error_page` setting in your server's `nginx.conf` file, or in the specific configuration file that Nginx is using for your site.
+
+These configuration files are typically found in `/etc/nginx/`, though their location varies by server. If your site is managed using Laravel Forge, for example, the configuration file for your site will be located at `/etc/nginx/sites-enabled/{name-of-your-site}`; it can also be edited via Forge's "Edit Nginx Configuration" option in the "Files" menu.
 
 Once you've located your Nginx configuration file, add the following line to the `server` block:
 

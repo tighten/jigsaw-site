@@ -40,4 +40,10 @@ This means your "About us" page will be available at `http://example.com/about-u
 
 ### Disabling Pretty URLs
 
-If you need to disable this behavior, use the `--pretty=false` option when building your site.
+To disable this behavior, set the `pretty` option to `false` in your config file:
+
+```php
+return [
+    'pretty' => false,
+];
+```

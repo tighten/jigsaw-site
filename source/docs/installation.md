@@ -7,7 +7,7 @@ section: documentation_content
 
 ### System Requirements
 
-To use Jigsaw, you need to have PHP (minimum version 8.0) and [Composer](https://getcomposer.org/) installed on your machine. You'll also optionally need Node.js and NPM installed if you want to use [Laravel Mix](https://laravel.com/docs/mix) to compile your CSS and Javascript.
+To use Jigsaw, you need to have PHP (minimum version 8.2) and [Composer](https://getcomposer.org/) installed on your machine. You'll also optionally need Node.js and NPM installed if you want to use [Vite](https://laravel.com/docs/12.x/vite) to compile your CSS and Javascript.
 
 ---
 
@@ -57,49 +57,40 @@ By default, Jigsaw gives you the following directory structure:
 <div class="files">
     <div class="folder folder--open">source
         <div class="folder folder--open">_assets
+            <div class="folder folder--open">css
+                <div class="file">main.css</div>
+            </div>
             <div class="folder folder--open">js
                 <div class="file">main.js</div>
             </div>
-            <div class="folder folder--open">sass
-                <div class="file">main.scss</div>
-            </div>
         </div>
         <div class="folder folder--open">_layouts
-            <div class="file">master.blade.php</div>
+            <div class="file">main.blade.php</div>
         </div>
         <div class="folder folder--open">assets
-            <div class="folder folder--open">build
-                <div class="folder folder--open">js
-                    <div class="file">main.js</div>
-                </div>
-                <div class="folder folder--open">sass
-                    <div class="file">main.css</div>
-                </div>
-                <div class="file">mix-manifest.json</div>
-            </div>
             <div class="folder folder--open">images
                 <div class="file">jigsaw.png</div>
             </div>
         </div>
         <div class="file">index.blade.php</div>
     </div>
-    <div class="folder">tasks</div>
     <div class="folder">vendor</div>
     <div class="file">bootstrap.php</div>
     <div class="file">composer.json</div>
     <div class="file">composer.lock</div>
     <div class="file">config.php</div>
+    <div class="file">config.production.php</div>
+    <div class="file">package-lock.json</div>
     <div class="file">package.json</div>
-    <div class="file">webpack.mix.js</div>
+    <div class="file">vite.config.js</div>
 </div>
 
 The `/source` directory contains the actual contents of your site. This is where all of your site's pages, CSS, Javascript, images, etc. will be kept.
 
-At the root of the directory, Jigsaw provides a `config.php` file where you can specify configuration settings for your site, along with `webpack.mix.js` for settings related to compiling your assets.
+At the root of the directory, Jigsaw provides a `config.php` file where you can specify configuration settings for your site, along with `vite.config.js` for settings related to compiling your assets.
 
-Next, learn about [building and previewing your site](/docs/building-and-previewing).
+Next, learn about [local development](/docs/local-development).
 
 ---
-<div class="pt-3"></div>
 
 > Why are there two `assets` directories in `/source`, one prefixed with an underscore? Find out in the [Compiling Assets](/docs/compiling-assets) section.

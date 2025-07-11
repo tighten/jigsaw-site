@@ -21,17 +21,14 @@ Both the `blog` and `docs` starter templates include samples of common page type
 
 - A fully responsive navigation bar
 - [Tailwind CSS](https://tailwindcss.com/), a utility CSS framework that allows you to customize your design without touching a line of CSS
-- [Purgecss](https://www.purgecss.com/) to remove unused selectors from your CSS, resulting in smaller CSS files
-- Syntax highlighting using [highlight.js](https://highlightjs.org/)
+- Syntax highlighting using [Prism.js](https://prismjs.com/)
 - A script that automatically generates a `sitemap.xml` file
-- [Browsersync](https://browsersync.io/) to automatically open a new browser tab and reload the page every time you make a change
 - A custom 404 page
 
 The `blog` template also includes:
 
-- A component for accepting signups for a [Mailchimp](https://mailchimp.com/) newsletter
 - A sample contact form
-- A search bar powered by [Fuse.js](http://fusejs.io/) and [Vue.js](https://vuejs.org/), which indexes your content automatically and requires zero configuration
+- A search bar powered by [Fuse.js](http://fusejs.io/) and [Alpine.js](https://alpinejs.dev/), which indexes your content automatically and requires zero configuration
 
 ...while the `docs` template includes:
 
@@ -100,7 +97,7 @@ return [
     'commands' => [
         'composer install',
         'npm install',
-        'npm run watch',
+        'npm run dev',
     ],
 ];
 ```
