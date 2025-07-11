@@ -66,6 +66,15 @@ Then update your main layout file (e.g., `main.blade.php`):
 + <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
 ```
 
+Finally, to preview your site locally, first create a `.env` file and specify your local URL in the `APP_URL` variable:
+
+```toml
+APP_URL=http://your_url_here
+```
+
+* If you use Jigsaw's serve command, it will be `http://localhost:8000`
+* If you use Laravel Valet, it will have a `.test` domain, like `http://site.test`
+
 ### Tailwind
 
 If you're using **Tailwind 3**, make sure PostCSS and Autoprefixer are installed:
